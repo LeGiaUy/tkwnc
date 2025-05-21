@@ -1,0 +1,1677 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Tài khoản - SmartphoneStore</title>
+  <meta name="description" content="Quản lý tài khoản của bạn tại SmartphoneStore">
+  <meta name="keywords" content="tài khoản, smartphone, điện thoại, đơn hàng, thanh toán">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/drift-zoom/drift-basic.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: SmartphoneStore
+  * Template URL: https://bootstrapmade.com/fashion-store-bootstrap-template/
+  * Updated: Apr 26 2025 with Bootstrap v5.3.5
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="account-page">
+
+  <header id="header" class="header position-relative">
+    <!-- Top Bar -->
+    <div class="top-bar py-2 d-none d-lg-block">
+      <div class="container-fluid container-xl">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="d-flex align-items-center">
+              <div class="top-bar-item me-4">
+                <i class="bi bi-telephone-fill me-2"></i>
+                <span>Hỗ trợ khách hàng: </span>
+                <a href="tel:+1234567890">0961 750 846</a>
+              </div>
+              <div class="top-bar-item">
+                <i class="bi bi-envelope-fill me-2"></i>
+                <a href="mailto:leuy091104@gmail.com">leuy091104@gmail.com</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="d-flex justify-content-end">
+              <div class="top-bar-item me-4">
+                <a href="track-order.html">
+                  <i class="bi bi-truck me-2"></i>Theo dõi đơn hàng
+                </a>
+              </div>
+              <div class="top-bar-item dropdown me-4">
+                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">
+                  <i class="bi bi-translate me-2"></i>Tiếng Việt
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#"><i class="bi bi-check2 me-2 selected-icon"></i>Tiếng Việt</a></li>
+                  <li><a class="dropdown-item" href="#">English</a></li>
+                  <li><a class="dropdown-item" href="#">Español</a></li>
+                  <li><a class="dropdown-item" href="#">Français</a></li>
+                </ul>
+              </div>
+              <div class="top-bar-item dropdown">
+                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">
+                  <i class="bi bi-currency-dollar me-2"></i>VND
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#"><i class="bi bi-check2 me-2 selected-icon"></i>VND</a></li>
+                  <li><a class="dropdown-item" href="#">USD</a></li>
+                  <li><a class="dropdown-item" href="#">EUR</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Header -->
+    <div class="main-header">
+      <div class="container-fluid container-xl">
+        <div class="d-flex py-3 align-items-center justify-content-between">
+
+          <!-- Logo -->
+          <a href="index.html" class="logo d-flex align-items-center">
+            <!-- Uncomment the line below if you also wish to use an image logo -->
+            <!-- <img src="assets/img/logo.webp" alt=""> -->
+            <h1 class="sitename">Smartphone<span>Store</span></h1>
+          </a>
+
+          <!-- Search -->
+          <form class="search-form desktop-search-form">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Tìm kiếm sản phẩm...">
+              <button class="btn search-btn" type="submit">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+          </form>
+
+          <!-- Actions -->
+          <div class="header-actions d-flex align-items-center justify-content-end">
+
+            <!-- Mobile Search Toggle -->
+            <button class="header-action-btn mobile-search-toggle d-xl-none" type="button" data-bs-toggle="collapse" data-bs-target="#mobileSearch" aria-expanded="false" aria-controls="mobileSearch">
+              <i class="bi bi-search"></i>
+            </button>
+
+            <!-- Account -->
+            <div class="dropdown account-dropdown">
+              <button class="header-action-btn" data-bs-toggle="dropdown">
+                <i class="bi bi-person"></i>
+                <span class="action-text d-none d-md-inline-block">Tài khoản</span>
+              </button>
+              <div class="dropdown-menu">
+                <div class="dropdown-header">
+                  <h6>Chào mừng đến với <span class="sitename">SmartphoneStore</span></h6>
+                  <p class="mb-0">Truy cập tài khoản &amp; quản lý đơn hàng</p>
+                </div>
+                <div class="dropdown-body">
+                  <a class="dropdown-item d-flex align-items-center" href="account.html">
+                    <i class="bi bi-person-circle me-2"></i>
+                    <span>Hồ sơ của tôi</span>
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="orders.html">
+                    <i class="bi bi-bag-check me-2"></i>
+                    <span>Đơn hàng của tôi</span>
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="wishlist.html">
+                    <i class="bi bi-heart me-2"></i>
+                    <span>Danh sách yêu thích</span>
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="returns.html">
+                    <i class="bi bi-arrow-return-left me-2"></i>
+                    <span>Đổi trả &amp; Hoàn tiền</span>
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="settings.html">
+                    <i class="bi bi-gear me-2"></i>
+                    <span>Cài đặt</span>
+                  </a>
+                </div>
+                <div class="dropdown-footer">
+                  <a href="login.html" class="btn btn-primary w-100 mb-2">Đăng nhập</a>
+                  <a href="register.html" class="btn btn-outline-primary w-100">Đăng ký</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Wishlist -->
+            <a href="wishlist.html" class="header-action-btn d-none d-md-flex">
+              <i class="bi bi-heart"></i>
+              <span class="action-text d-none d-md-inline-block">Yêu thích</span>
+              <span class="badge">0</span>
+            </a>
+
+            <!-- Cart -->
+            <div class="dropdown cart-dropdown">
+              <button class="header-action-btn" data-bs-toggle="dropdown">
+                <i class="bi bi-cart3"></i>
+                <span class="action-text d-none d-md-inline-block">Giỏ hàng</span>
+                <span class="badge">3</span>
+              </button>
+              <div class="dropdown-menu cart-dropdown-menu">
+                <div class="dropdown-header">
+                  <h6>Giỏ hàng (3)</h6>
+                </div>
+                <div class="dropdown-body">
+                  <div class="cart-items">
+                    <!-- Cart Item 1 -->
+                    <div class="cart-item">
+                      <div class="cart-item-image">
+                        <img src="assets/img/product/iphone/iphone-16-pro-max.webp" alt="iphone-16-pro-max" class="img-fluid">
+                      </div>
+                      <div class="cart-item-content">
+                        <h6 class="cart-item-title">iPhone 16 Pro Max</h6>
+                        <div class="cart-item-meta">1 × 30.490.000đ</div>
+                      </div>
+                      <button class="cart-item-remove">
+                        <i class="bi bi-x"></i>
+                      </button>
+                    </div>
+
+                    <!-- Cart Item 2 -->
+                    <div class="cart-item">
+                      <div class="cart-item-image">
+                        <img src="assets/img/product/samsung/dien-thoai-samsung-galaxy-s25-ultra_3__3.webp" alt="dien-thoai-samsung-galaxy-s25-ultra_3__3" class="img-fluid">
+                      </div>
+                      <div class="cart-item-content">
+                        <h6 class="cart-item-title">Samsung Galaxy S25 Ultra</h6>
+                        <div class="cart-item-meta">1 × 28.490.000đ</div>
+                      </div>
+                      <button class="cart-item-remove">
+                        <i class="bi bi-x"></i>
+                      </button>
+                    </div>
+
+                    <!-- Cart Item 3 -->
+                    <div class="cart-item">
+                      <div class="cart-item-image">
+                        <img src="assets/img/product/xiaomi/xiaomi_14t_2_.webp" alt="xiaomi_14t_2_" class="img-fluid">
+                      </div>
+                      <div class="cart-item-content">
+                        <h6 class="cart-item-title">Xiaomi 14T</h6>
+                        <div class="cart-item-meta">1 × 16.990.000đ</div>
+                      </div>
+                      <button class="cart-item-remove">
+                        <i class="bi bi-x"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="dropdown-footer">
+                  <div class="cart-total">
+                    <span>Tổng cộng:</span>
+                    <span class="cart-total-price">75.970.000đ</span>
+                  </div>
+                  <div class="cart-actions">
+                    <a href="cart.html" class="btn btn-outline-primary">Xem giỏ hàng</a>
+                    <a href="checkout.html" class="btn btn-primary">Thanh toán</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Mobile Navigation Toggle -->
+            <i class="mobile-nav-toggle d-xl-none bi bi-list me-0"></i>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="header-nav">
+      <div class="container-fluid container-xl position-relative">
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="about.html">Giới thiệu</a></li>
+            <li class="dropdown"><a href="category.html"><span>Sản phẩm</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="#">iPhone</a></li>
+                <li><a href="#">Samsung</a></li>
+                <li><a href="#">Xiaomi</a></li>
+                <li><a href="#">Oppo</a></li>
+                <li class="dropdown"><a href="#"><span>Phụ kiện</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="#">Tai nghe Bluetooth</a></li>
+                    <li><a href="#">IEM</a></li>
+                    <li><a href="#">Loa Bluetooth</a></li>
+                    <li><a href="#">Dây & củ sạc</a></li>
+                    <li><a href="#">Ốp lưng</a></li>
+                    <li><a href="#">Kính cường lực</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a href="account.html" class="active">Tài khoản</a></li>
+            <li><a href="cart.html">Giỏ hàng</a></li>
+            <li><a href="checkout.html">Thanh toán</a></li>
+            <li><a href="contact.html">Liên hệ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Announcement Bar -->
+    <div class="announcement-bar py-2">
+      <div class="container-fluid container-xl">
+        <div class="announcement-slider swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": 1,
+              "effect": "slide",
+              "direction": "vertical"
+            }
+          </script>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">🚚 Miễn phí vận chuyển trong bán kính 3km</div>
+            <div class="swiper-slide">💰 Bảo hành đổi trả trong 30 ngày</div>
+            <div class="swiper-slide">🎁 Giảm 20% cho đơn hàng đầu tiên - Mã: FIRST20</div>
+            <div class="swiper-slide">⚡ Flash Sale! Giảm giá lên đến 70% cho các sản phẩm được chọn</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Search Form -->
+    <div class="collapse" id="mobileSearch">
+      <div class="container">
+        <form class="search-form">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Tìm kiếm sản phẩm...">
+            <button class="btn search-btn" type="submit">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title light-background">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Trang chủ</a></li>
+            <li class="current">Tài khoản</li>
+          </ol>
+        </nav>
+        <h1>Tài khoản</h1>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Account Section -->
+    <section id="account" class="account section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <!-- Mobile Sidebar Toggle Button -->
+        <div class="sidebar-toggle d-lg-none mb-3">
+          <button class="btn btn-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#profileSidebar" aria-expanded="false" aria-controls="profileSidebar">
+            <i class="bi bi-list me-2"></i> Menu hồ sơ
+          </button>
+        </div>
+
+        <div class="row">
+          <!-- Profile Sidebar -->
+          <div class="col-lg-3 profile-sidebar collapse d-lg-block" id="profileSidebar" data-aos="fade-right" data-aos-delay="200">
+            <div class="profile-header">
+              <div class="profile-avatar">
+                <span>N</span>
+              </div>
+              <div class="profile-info">
+                <h4>Nguyễn Văn A</h4>
+                <div class="profile-bonus">
+                  <i class="bi bi-gift"></i>
+                  <span>100 điểm thưởng</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="profile-nav">
+              <ul class="nav flex-column" id="profileTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="orders-tab" data-bs-toggle="tab" data-bs-target="#orders" type="button" role="tab" aria-controls="orders" aria-selected="true">
+                    <i class="bi bi-box-seam"></i>
+                    <span>Đơn hàng</span>
+                    <span class="badge">1</span>
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="wishlist-tab" data-bs-toggle="tab" data-bs-target="#wishlist" type="button" role="tab" aria-controls="wishlist" aria-selected="false">
+                    <i class="bi bi-heart"></i>
+                    <span>Yêu thích</span>
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="payment-tab" data-bs-toggle="tab" data-bs-target="#payment" type="button" role="tab" aria-controls="payment" aria-selected="false">
+                    <i class="bi bi-credit-card"></i>
+                    <span>Phương thức thanh toán</span>
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews" type="button" role="tab" aria-controls="reviews" aria-selected="false">
+                    <i class="bi bi-star"></i>
+                    <span>Đánh giá của tôi</span>
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="personal-tab" data-bs-toggle="tab" data-bs-target="#personal" type="button" role="tab" aria-controls="personal" aria-selected="false">
+                    <i class="bi bi-person"></i>
+                    <span>Thông tin cá nhân</span>
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="addresses-tab" data-bs-toggle="tab" data-bs-target="#addresses" type="button" role="tab" aria-controls="addresses" aria-selected="false">
+                    <i class="bi bi-geo-alt"></i>
+                    <span>Địa chỉ</span>
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="notifications-tab" data-bs-toggle="tab" data-bs-target="#notifications" type="button" role="tab" aria-controls="notifications" aria-selected="false">
+                    <i class="bi bi-bell"></i>
+                    <span>Thông báo</span>
+                  </button>
+                </li>
+              </ul>
+
+              <h6 class="nav-section-title">Dịch vụ khách hàng</h6>
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="bi bi-question-circle"></i>
+                    <span>Trung tâm trợ giúp</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="bi bi-file-text"></i>
+                    <span>Điều khoản và điều kiện</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link logout">
+                    <i class="bi bi-box-arrow-right"></i>
+                    <span>Đăng xuất</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Profile Content -->
+          <div class="col-lg-9 profile-content" data-aos="fade-left" data-aos-delay="300">
+            <div class="tab-content" id="profileTabsContent">
+              <!-- Orders Tab -->
+              <div class="tab-pane fade show active" id="orders" role="tabpanel" aria-labelledby="orders-tab">
+                <div class="tab-header">
+                  <h2>Đơn hàng</h2>
+                  <div class="tab-filters">
+                    <div class="row">
+                      <div class="col-md-6 mb-3 mb-md-0">
+                        <div class="dropdown">
+                          <button class="btn dropdown-toggle" type="button" id="statusFilter" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span>Chọn trạng thái</span>
+                            <i class="bi bi-chevron-down"></i>
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="statusFilter">
+                            <li><a class="dropdown-item" href="#">Tất cả trạng thái</a></li>
+                            <li><a class="dropdown-item" href="#">Đang xử lý</a></li>
+                            <li><a class="dropdown-item" href="#">Đã giao hàng</a></li>
+                            <li><a class="dropdown-item" href="#">Đã hủy</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="dropdown">
+                          <button class="btn dropdown-toggle" type="button" id="timeFilter" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span>Tất cả thời gian</span>
+                            <i class="bi bi-chevron-down"></i>
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="timeFilter">
+                            <li><a class="dropdown-item" href="#">Tất cả thời gian</a></li>
+                            <li><a class="dropdown-item" href="#">30 ngày gần đây</a></li>
+                            <li><a class="dropdown-item" href="#">6 tháng gần đây</a></li>
+                            <li><a class="dropdown-item" href="#">1 năm gần đây</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="orders-table">
+                  <div class="table-header">
+                    <div class="row">
+                      <div class="col-md-3">
+                        <div class="sort-header">
+                          Mã đơn hàng
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="sort-header">
+                          Ngày đặt
+                          <i class="bi bi-arrow-down-up"></i>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="sort-header">
+                          Trạng thái
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="sort-header">
+                          Tổng tiền
+                          <i class="bi bi-arrow-down-up"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="order-items">
+                    <!-- Order Item 1 -->
+                    <div class="order-item">
+                      <div class="row align-items-center">
+                        <div class="col-md-3">
+                          <div class="order-id">78A6431D409</div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="order-date">15/02/2025</div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="order-status in-progress">
+                            <span class="status-dot"></span>
+                            <span>Đang xử lý</span>
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="order-total">30.490.000đ</div>
+                        </div>
+                      </div>
+                      <div class="order-products">
+                        <div class="product-thumbnails">
+                          <img src="assets/img/product/iphone/iphone-16-pro-max.webp" alt="iPhone 16 Pro Max" class="product-thumb" loading="lazy">
+                        </div>
+                        <button type="button" class="order-details-link" data-bs-toggle="collapse" data-bs-target="#orderDetails1" aria-expanded="false" aria-controls="orderDetails1">
+                          <i class="bi bi-chevron-down"></i>
+                        </button>
+                      </div>
+                      <div class="collapse order-details" id="orderDetails1">
+                        <div class="order-details-content">
+                          <div class="order-details-header">
+                            <h5>Chi tiết đơn hàng</h5>
+                            <div class="order-info">
+                              <div class="info-item">
+                                <span class="info-label">Ngày đặt:</span>
+                                <span class="info-value">15/02/2025</span>
+                              </div>
+                              <div class="info-item">
+                                <span class="info-label">Phương thức thanh toán:</span>
+                                <span class="info-value">Thẻ tín dụng (**** 4589)</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="order-items-list">
+                            <div class="order-item-detail">
+                              <div class="item-image">
+                                <img src="assets/img/product/iphone/iphone-16-pro-max.webp" alt="iPhone 16 Pro Max" loading="lazy">
+                              </div>
+                              <div class="item-info">
+                                <h6>iPhone 16 Pro Max 256GB</h6>
+                                <div class="item-meta">
+                                  <span class="item-sku">Mã SP: IP16PM-256</span>
+                                  <span class="item-qty">Số lượng: 1</span>
+                                </div>
+                              </div>
+                              <div class="item-price">30.490.000đ</div>
+                            </div>
+                          </div>
+                          <div class="order-summary">
+                            <div class="summary-row">
+                              <span>Tạm tính:</span>
+                              <span>30.490.000đ</span>
+                            </div>
+                            <div class="summary-row">
+                              <span>Phí vận chuyển:</span>
+                              <span>0đ</span>
+                            </div>
+                            <div class="summary-row">
+                              <span>Thuế:</span>
+                              <span>0đ</span>
+                            </div>
+                            <div class="summary-row total">
+                              <span>Tổng cộng:</span>
+                              <span>30.490.000đ</span>
+                            </div>
+                          </div>
+                          <div class="shipping-info">
+                            <div class="shipping-address">
+                              <h6>Địa chỉ giao hàng</h6>
+                              <p>123 Đường Lê Duẩn<br>Phường Nguyễn Du<br>Quận Hai Bà Trưng, Hà Nội</p>
+                            </div>
+                            <div class="shipping-method">
+                              <h6>Phương thức vận chuyển</h6>
+                              <p>Giao hàng nhanh (1-2 ngày làm việc)</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div><!-- End Order Item -->
+
+                    <!-- Order Item 2 -->
+                    <div class="order-item">
+                      <div class="row align-items-center">
+                        <div class="col-md-3">
+                          <div class="order-id">47H76G09F33</div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="order-date">12/10/2024</div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="order-status delivered">
+                            <span class="status-dot"></span>
+                            <span>Delivered</span>
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="order-total">$360.75</div>
+                        </div>
+                      </div>
+                      <div class="order-products">
+                        <div class="product-thumbnails">
+                          <img src="assets/img/product/product-4.webp" alt="Product" class="product-thumb" loading="lazy">
+                        </div>
+                        <button type="button" class="order-details-link" data-bs-toggle="collapse" data-bs-target="#orderDetails2" aria-expanded="false" aria-controls="orderDetails2">
+                          <i class="bi bi-chevron-down"></i>
+                        </button>
+                      </div>
+                      <div class="collapse order-details" id="orderDetails2">
+                        <div class="order-details-content">
+                          <div class="order-details-header">
+                            <h5>Order Details</h5>
+                            <div class="order-info">
+                              <div class="info-item">
+                                <span class="info-label">Order Date:</span>
+                                <span class="info-value">12/10/2024</span>
+                              </div>
+                              <div class="info-item">
+                                <span class="info-label">Payment Method:</span>
+                                <span class="info-value">Credit Card (**** 7821)</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="order-items-list">
+                            <div class="order-item-detail">
+                              <div class="item-image">
+                                <img src="assets/img/product/product-4.webp" alt="Product" loading="lazy">
+                              </div>
+                              <div class="item-info">
+                                <h6>Ut enim ad minim veniam</h6>
+                                <div class="item-meta">
+                                  <span class="item-sku">SKU: PRD-004</span>
+                                  <span class="item-qty">Qty: 1</span>
+                                </div>
+                              </div>
+                              <div class="item-price">$329.99</div>
+                            </div>
+                          </div>
+                          <div class="order-summary">
+                            <div class="summary-row">
+                              <span>Subtotal:</span>
+                              <span>$329.99</span>
+                            </div>
+                            <div class="summary-row">
+                              <span>Shipping:</span>
+                              <span>$9.99</span>
+                            </div>
+                            <div class="summary-row">
+                              <span>Tax:</span>
+                              <span>$20.77</span>
+                            </div>
+                            <div class="summary-row total">
+                              <span>Total:</span>
+                              <span>$360.75</span>
+                            </div>
+                          </div>
+                          <div class="shipping-info">
+                            <div class="shipping-address">
+                              <h6>Shipping Address</h6>
+                              <p>123 Main Street<br>Apt 4B<br>New York, NY 10001<br>United States</p>
+                            </div>
+                            <div class="shipping-method">
+                              <h6>Shipping Method</h6>
+                              <p>Standard Shipping (5-7 business days)</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div><!-- End Order Item -->
+
+                    <!-- Order Item 3 -->
+                    <div class="order-item">
+                      <div class="row align-items-center">
+                        <div class="col-md-3">
+                          <div class="order-id">502TR872W2</div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="order-date">11/05/2024</div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="order-status delivered">
+                            <span class="status-dot"></span>
+                            <span>Delivered</span>
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="order-total">$4,268.00</div>
+                        </div>
+                      </div>
+                      <div class="order-products">
+                        <div class="product-thumbnails">
+                          <img src="assets/img/product/product-5.webp" alt="Product" class="product-thumb" loading="lazy">
+                          <img src="assets/img/product/product-6.webp" alt="Product" class="product-thumb" loading="lazy">
+                          <img src="assets/img/product/product-7.webp" alt="Product" class="product-thumb" loading="lazy">
+                          <span class="more-products">+3</span>
+                        </div>
+                        <button type="button" class="order-details-link" data-bs-toggle="collapse" data-bs-target="#orderDetails3" aria-expanded="false" aria-controls="orderDetails3">
+                          <i class="bi bi-chevron-down"></i>
+                        </button>
+                      </div>
+                      <div class="collapse order-details" id="orderDetails3">
+                        <div class="order-details-content">
+                          <div class="order-details-header">
+                            <h5>Order Details</h5>
+                            <div class="order-info">
+                              <div class="info-item">
+                                <span class="info-label">Order Date:</span>
+                                <span class="info-value">11/05/2024</span>
+                              </div>
+                              <div class="info-item">
+                                <span class="info-label">Payment Method:</span>
+                                <span class="info-value">Credit Card (**** 4589)</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="order-items-list">
+                            <div class="order-item-detail">
+                              <div class="item-image">
+                                <img src="assets/img/product/product-5.webp" alt="Product" loading="lazy">
+                              </div>
+                              <div class="item-info">
+                                <h6>Quis nostrud exercitation</h6>
+                                <div class="item-meta">
+                                  <span class="item-sku">SKU: PRD-005</span>
+                                  <span class="item-qty">Qty: 2</span>
+                                </div>
+                              </div>
+                              <div class="item-price">$1,299.99</div>
+                            </div>
+                            <div class="order-item-detail">
+                              <div class="item-image">
+                                <img src="assets/img/product/product-6.webp" alt="Product" loading="lazy">
+                              </div>
+                              <div class="item-info">
+                                <h6>Ullamco laboris nisi</h6>
+                                <div class="item-meta">
+                                  <span class="item-sku">SKU: PRD-006</span>
+                                  <span class="item-qty">Qty: 1</span>
+                                </div>
+                              </div>
+                              <div class="item-price">$799.99</div>
+                            </div>
+                            <div class="order-item-detail">
+                              <div class="item-image">
+                                <img src="assets/img/product/product-7.webp" alt="Product" loading="lazy">
+                              </div>
+                              <div class="item-info">
+                                <h6>Aliquip ex ea commodo</h6>
+                                <div class="item-meta">
+                                  <span class="item-sku">SKU: PRD-007</span>
+                                  <span class="item-qty">Qty: 3</span>
+                                </div>
+                              </div>
+                              <div class="item-price">$449.99</div>
+                            </div>
+                            <div class="order-item-detail">
+                              <div class="item-image">
+                                <img src="assets/img/product/product-8.webp" alt="Product" loading="lazy">
+                              </div>
+                              <div class="item-info">
+                                <h6>Duis aute irure dolor</h6>
+                                <div class="item-meta">
+                                  <span class="item-sku">SKU: PRD-008</span>
+                                  <span class="item-qty">Qty: 1</span>
+                                </div>
+                              </div>
+                              <div class="item-price">$249.99</div>
+                            </div>
+                          </div>
+                          <div class="order-summary">
+                            <div class="summary-row">
+                              <span>Subtotal:</span>
+                              <span>$3,899.94</span>
+                            </div>
+                            <div class="summary-row">
+                              <span>Shipping:</span>
+                              <span>$29.99</span>
+                            </div>
+                            <div class="summary-row">
+                              <span>Tax:</span>
+                              <span>$338.07</span>
+                            </div>
+                            <div class="summary-row total">
+                              <span>Total:</span>
+                              <span>$4,268.00</span>
+                            </div>
+                          </div>
+                          <div class="shipping-info">
+                            <div class="shipping-address">
+                              <h6>Shipping Address</h6>
+                              <p>456 Business Ave<br>Suite 200<br>San Francisco, CA 94107<br>United States</p>
+                            </div>
+                            <div class="shipping-method">
+                              <h6>Shipping Method</h6>
+                              <p>Premium Delivery (1-2 business days)</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div><!-- End Order Item -->
+
+                    <!-- Order Item 4 -->
+                    <div class="order-item">
+                      <div class="row align-items-center">
+                        <div class="col-md-3">
+                          <div class="order-id">34VB5540K83</div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="order-date">09/22/2024</div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="order-status canceled">
+                            <span class="status-dot"></span>
+                            <span>Canceled</span>
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="order-total">$987.50</div>
+                        </div>
+                      </div>
+                      <div class="order-products">
+                        <div class="product-thumbnails">
+                          <img src="assets/img/product/product-8.webp" alt="Product" class="product-thumb" loading="lazy">
+                          <img src="assets/img/product/product-9.webp" alt="Product" class="product-thumb" loading="lazy">
+                        </div>
+                        <button type="button" class="order-details-link" data-bs-toggle="collapse" data-bs-target="#orderDetails4" aria-expanded="false" aria-controls="orderDetails4">
+                          <i class="bi bi-chevron-down"></i>
+                        </button>
+                      </div>
+                      <div class="collapse order-details" id="orderDetails4">
+                        <div class="order-details-content">
+                          <div class="order-details-header">
+                            <h5>Order Details</h5>
+                            <div class="order-info">
+                              <div class="info-item">
+                                <span class="info-label">Order Date:</span>
+                                <span class="info-value">09/22/2024</span>
+                              </div>
+                              <div class="info-item">
+                                <span class="info-label">Payment Method:</span>
+                                <span class="info-value">Credit Card (**** 7821)</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="order-items-list">
+                            <div class="order-item-detail">
+                              <div class="item-image">
+                                <img src="assets/img/product/product-8.webp" alt="Product" loading="lazy">
+                              </div>
+                              <div class="item-info">
+                                <h6>In reprehenderit in voluptate</h6>
+                                <div class="item-meta">
+                                  <span class="item-sku">SKU: PRD-008</span>
+                                  <span class="item-qty">Qty: 1</span>
+                                </div>
+                              </div>
+                              <div class="item-price">$499.99</div>
+                            </div>
+                            <div class="order-item-detail">
+                              <div class="item-image">
+                                <img src="assets/img/product/product-9.webp" alt="Product" loading="lazy">
+                              </div>
+                              <div class="item-info">
+                                <h6>Velit esse cillum dolore</h6>
+                                <div class="item-meta">
+                                  <span class="item-sku">SKU: PRD-009</span>
+                                  <span class="item-qty">Qty: 1</span>
+                                </div>
+                              </div>
+                              <div class="item-price">$399.99</div>
+                            </div>
+                          </div>
+                          <div class="order-summary">
+                            <div class="summary-row">
+                              <span>Subtotal:</span>
+                              <span>$899.98</span>
+                            </div>
+                            <div class="summary-row">
+                              <span>Shipping:</span>
+                              <span>$12.99</span>
+                            </div>
+                            <div class="summary-row">
+                              <span>Tax:</span>
+                              <span>$74.53</span>
+                            </div>
+                            <div class="summary-row total">
+                              <span>Total:</span>
+                              <span>$987.50</span>
+                            </div>
+                          </div>
+                          <div class="shipping-info">
+                            <div class="shipping-address">
+                              <h6>Shipping Address</h6>
+                              <p>123 Main Street<br>Apt 4B<br>New York, NY 10001<br>United States</p>
+                            </div>
+                            <div class="shipping-method">
+                              <h6>Shipping Method</h6>
+                              <p>Standard Shipping (5-7 business days)</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div><!-- End Order Item -->
+
+                    <!-- Order Item 5 -->
+                    <div class="order-item">
+                      <div class="row align-items-center">
+                        <div class="col-md-3">
+                          <div class="order-id">112P45A90V2</div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="order-date">05/18/2024</div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="order-status delivered">
+                            <span class="status-dot"></span>
+                            <span>Delivered</span>
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="order-total">$53.00</div>
+                        </div>
+                      </div>
+                      <div class="order-products">
+                        <div class="product-thumbnails">
+                          <img src="assets/img/product/product-10.webp" alt="Product" class="product-thumb" loading="lazy">
+                        </div>
+                        <button type="button" class="order-details-link" data-bs-toggle="collapse" data-bs-target="#orderDetails5" aria-expanded="false" aria-controls="orderDetails5">
+                          <i class="bi bi-chevron-down"></i>
+                        </button>
+                      </div>
+                      <div class="collapse order-details" id="orderDetails5">
+                        <div class="order-details-content">
+                          <div class="order-details-header">
+                            <h5>Order Details</h5>
+                            <div class="order-info">
+                              <div class="info-item">
+                                <span class="info-label">Order Date:</span>
+                                <span class="info-value">05/18/2024</span>
+                              </div>
+                              <div class="info-item">
+                                <span class="info-label">Payment Method:</span>
+                                <span class="info-value">Credit Card (**** 4589)</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="order-items-list">
+                            <div class="order-item-detail">
+                              <div class="item-image">
+                                <img src="assets/img/product/product-10.webp" alt="Product" loading="lazy">
+                              </div>
+                              <div class="item-info">
+                                <h6>Eu fugiat nulla pariatur</h6>
+                                <div class="item-meta">
+                                  <span class="item-sku">SKU: PRD-010</span>
+                                  <span class="item-qty">Qty: 1</span>
+                                </div>
+                              </div>
+                              <div class="item-price">$49.99</div>
+                            </div>
+                          </div>
+                          <div class="order-summary">
+                            <div class="summary-row">
+                              <span>Subtotal:</span>
+                              <span>$49.99</span>
+                            </div>
+                            <div class="summary-row">
+                              <span>Shipping:</span>
+                              <span>$0.00</span>
+                            </div>
+                            <div class="summary-row">
+                              <span>Tax:</span>
+                              <span>$3.01</span>
+                            </div>
+                            <div class="summary-row total">
+                              <span>Total:</span>
+                              <span>$53.00</span>
+                            </div>
+                          </div>
+                          <div class="shipping-info">
+                            <div class="shipping-address">
+                              <h6>Shipping Address</h6>
+                              <p>123 Main Street<br>Apt 4B<br>New York, NY 10001<br>United States</p>
+                            </div>
+                            <div class="shipping-method">
+                              <h6>Shipping Method</h6>
+                              <p>Free Shipping (7-10 business days)</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div><!-- End Order Item -->
+
+                    <!-- Order Item 6 -->
+                    <div class="order-item">
+                      <div class="row align-items-center">
+                        <div class="col-md-3">
+                          <div class="order-id">28BA67U0981</div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="order-date">04/03/2024</div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="order-status canceled">
+                            <span class="status-dot"></span>
+                            <span>Canceled</span>
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="order-total">$1,029.50</div>
+                        </div>
+                      </div>
+                      <div class="order-products">
+                        <div class="product-thumbnails">
+                          <img src="assets/img/product/product-11.webp" alt="Product" class="product-thumb" loading="lazy">
+                          <img src="assets/img/product/product-1-variant.webp" alt="Product" class="product-thumb" loading="lazy">
+                        </div>
+                        <button type="button" class="order-details-link" data-bs-toggle="collapse" data-bs-target="#orderDetails6" aria-expanded="false" aria-controls="orderDetails6">
+                          <i class="bi bi-chevron-down"></i>
+                        </button>
+                      </div>
+                      <div class="collapse order-details" id="orderDetails6">
+                        <div class="order-details-content">
+                          <div class="order-details-header">
+                            <h5>Order Details</h5>
+                            <div class="order-info">
+                              <div class="info-item">
+                                <span class="info-label">Order Date:</span>
+                                <span class="info-value">04/03/2024</span>
+                              </div>
+                              <div class="info-item">
+                                <span class="info-label">Payment Method:</span>
+                                <span class="info-value">Credit Card (**** 7821)</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="order-items-list">
+                            <div class="order-item-detail">
+                              <div class="item-image">
+                                <img src="assets/img/product/product-11.webp" alt="Product" loading="lazy">
+                              </div>
+                              <div class="item-info">
+                                <h6>Excepteur sint occaecat</h6>
+                                <div class="item-meta">
+                                  <span class="item-sku">SKU: PRD-011</span>
+                                  <span class="item-qty">Qty: 1</span>
+                                </div>
+                              </div>
+                              <div class="item-price">$599.99</div>
+                            </div>
+                            <div class="order-item-detail">
+                              <div class="item-image">
+                                <img src="assets/img/product/product-1-variant.webp" alt="Product" loading="lazy">
+                              </div>
+                              <div class="item-info">
+                                <h6>Cupidatat non proident</h6>
+                                <div class="item-meta">
+                                  <span class="item-sku">SKU: PRD-001-V</span>
+                                  <span class="item-qty">Qty: 1</span>
+                                </div>
+                              </div>
+                              <div class="item-price">$349.99</div>
+                            </div>
+                          </div>
+                          <div class="order-summary">
+                            <div class="summary-row">
+                              <span>Subtotal:</span>
+                              <span>$949.98</span>
+                            </div>
+                            <div class="summary-row">
+                              <span>Shipping:</span>
+                              <span>$0.00</span>
+                            </div>
+                            <div class="summary-row">
+                              <span>Tax:</span>
+                              <span>$79.52</span>
+                            </div>
+                            <div class="summary-row total">
+                              <span>Total:</span>
+                              <span>$1,029.50</span>
+                            </div>
+                          </div>
+                          <div class="shipping-info">
+                            <div class="shipping-address">
+                              <h6>Shipping Address</h6>
+                              <p>456 Business Ave<br>Suite 200<br>San Francisco, CA 94107<br>United States</p>
+                            </div>
+                            <div class="shipping-method">
+                              <h6>Shipping Method</h6>
+                              <p>Free Express Shipping (1-2 business days)</p>
+                            </div>
+                          </div>
+                          <div class="cancellation-info mt-3">
+                            <h6>Cancellation Reason</h6>
+                            <p>Order was canceled at customer's request. Items were not in stock at the time of processing.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div><!-- End Order Item -->
+                  </div>
+
+                  <div class="pagination-container">
+                    <nav aria-label="Orders pagination">
+                      <ul class="pagination">
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Wishlist Tab -->
+              <div class="tab-pane fade" id="wishlist" role="tabpanel" aria-labelledby="wishlist-tab">
+                <div class="tab-header">
+                  <h2>Danh sách yêu thích</h2>
+                </div>
+                <div class="wishlist-items">
+                  <div class="row">
+                    <!-- Wishlist Item 1 -->
+                    <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                      <div class="wishlist-item">
+                        <div class="wishlist-image">
+                          <img src="assets/img/products/iphone/iphone-16-pro-max-1024x1024.jpg" alt="iPhone 16 Pro Max" loading="lazy">
+                          <button class="remove-wishlist" type="button">
+                            <i class="bi bi-x-lg"></i>
+                          </button>
+                        </div>
+                        <div class="wishlist-content">
+                          <h5>iPhone 16 Pro Max 256GB</h5>
+                          <div class="product-price">30.490.000đ</div>
+                          <button class="btn btn-add-cart">Thêm vào giỏ</button>
+                        </div>
+                      </div>
+                    </div><!-- End Wishlist Item -->
+
+                    <!-- Wishlist Item 2 -->
+                    <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                      <div class="wishlist-item">
+                        <div class="wishlist-image">
+                          <img src="assets/img/products/samsung/samsung-galaxy-s25-1024x1024.jpg" alt="Samsung Galaxy S25 Ultra" loading="lazy">
+                          <button class="remove-wishlist" type="button">
+                            <i class="bi bi-x-lg"></i>
+                          </button>
+                        </div>
+                        <div class="wishlist-content">
+                          <h5>Samsung Galaxy S25 Ultra 256GB</h5>
+                          <div class="product-price">28.490.000đ</div>
+                          <button class="btn btn-add-cart">Thêm vào giỏ</button>
+                        </div>
+                      </div>
+                    </div><!-- End Wishlist Item -->
+
+                    <!-- Wishlist Item 3 -->
+                    <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                      <div class="wishlist-item">
+                        <div class="wishlist-image">
+                          <img src="assets/img/products/xiaomi/xiaomi-14t-1024x1024.jpg" alt="Xiaomi 14T" loading="lazy">
+                          <button class="remove-wishlist" type="button">
+                            <i class="bi bi-x-lg"></i>
+                          </button>
+                        </div>
+                        <div class="wishlist-content">
+                          <h5>Xiaomi 14T 256GB</h5>
+                          <div class="product-price">16.990.000đ</div>
+                          <button class="btn btn-add-cart">Thêm vào giỏ</button>
+                        </div>
+                      </div>
+                    </div><!-- End Wishlist Item -->
+                  </div>
+                </div>
+              </div>
+
+              <!-- Payment Methods Tab -->
+              <div class="tab-pane fade" id="payment" role="tabpanel" aria-labelledby="payment-tab">
+                <div class="tab-header">
+                  <h2>Phương thức thanh toán</h2>
+                  <button class="btn btn-add-payment" type="button">
+                    <i class="bi bi-plus-lg"></i> Thêm phương thức thanh toán
+                  </button>
+                </div>
+                <div class="payment-methods">
+                  <!-- Payment Method 1 -->
+                  <div class="payment-method-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="payment-card">
+                      <div class="card-type">
+                        <i class="bi bi-credit-card"></i>
+                      </div>
+                      <div class="card-info">
+                        <div class="card-number">**** **** **** 4589</div>
+                        <div class="card-expiry">Hết hạn 09/2026</div>
+                      </div>
+                      <div class="card-actions">
+                        <button class="btn-edit-card" type="button">
+                          <i class="bi bi-pencil"></i>
+                        </button>
+                        <button class="btn-delete-card" type="button">
+                          <i class="bi bi-trash"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="default-badge">Mặc định</div>
+                  </div><!-- End Payment Method -->
+
+                  <!-- Payment Method 2 -->
+                  <div class="payment-method-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="payment-card">
+                      <div class="card-type">
+                        <i class="bi bi-credit-card"></i>
+                      </div>
+                      <div class="card-info">
+                        <div class="card-number">**** **** **** 7821</div>
+                        <div class="card-expiry">Hết hạn 05/2025</div>
+                      </div>
+                      <div class="card-actions">
+                        <button class="btn-edit-card" type="button">
+                          <i class="bi bi-pencil"></i>
+                        </button>
+                        <button class="btn-delete-card" type="button">
+                          <i class="bi bi-trash"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <button class="btn btn-sm btn-make-default" type="button">Đặt làm mặc định</button>
+                  </div><!-- End Payment Method -->
+                </div>
+              </div>
+
+              <!-- Reviews Tab -->
+              <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
+                <div class="tab-header">
+                  <h2>Đánh giá của tôi</h2>
+                </div>
+                <div class="reviews-list">
+                  <!-- Review Item 1 -->
+                  <div class="review-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="review-header">
+                      <div class="review-product">
+                        <img src="assets/img/products/iphone/iphone-16-pro-max-1024x1024.jpg" alt="Sản phẩm" class="product-image" loading="lazy">
+                        <div class="product-info">
+                          <h5>iPhone 16 Pro Max 256GB</h5>
+                          <div class="review-date">Đánh giá ngày 15/01/2025</div>
+                        </div>
+                      </div>
+                      <div class="review-rating">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star"></i>
+                      </div>
+                    </div>
+                    <div class="review-content">
+                      <p>Sản phẩm rất tốt, giao hàng nhanh.</p>
+                    </div>
+                    <div class="review-actions">
+                      <button class="btn btn-sm btn-edit-review" type="button">Sửa</button>
+                      <button class="btn btn-sm btn-delete-review" type="button">Xóa</button>
+                    </div>
+                  </div><!-- End Review Item -->
+
+                  <!-- Review Item 2 -->
+                  <div class="review-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="review-header">
+                      <div class="review-product">
+                        <img src="assets/img/products/iphone/iphone-15-pro-max-1024x1024.webp" alt="Sản phẩm" class="product-image" loading="lazy">
+                        <div class="product-info">
+                          <h5>Samsung Galaxy S25 Ultra 256GB</h5>
+                          <div class="review-date">Đánh giá ngày 03/12/2024</div>
+                        </div>
+                      </div>
+                      <div class="review-rating">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                    <div class="review-content">
+                      <p>Chất lượng tuyệt vời, sẽ ủng hộ tiếp.</p>
+                    </div>
+                    <div class="review-actions">
+                      <button class="btn btn-sm btn-edit-review" type="button">Sửa</button>
+                      <button class="btn btn-sm btn-delete-review" type="button">Xóa</button>
+                    </div>
+                  </div><!-- End Review Item -->
+                </div>
+              </div>
+
+              <!-- Personal Info Tab -->
+              <div class="tab-pane fade" id="personal" role="tabpanel" aria-labelledby="personal-tab">
+                <div class="tab-header">
+                  <h2>Thông tin cá nhân</h2>
+                </div>
+                <div class="personal-info-form" data-aos="fade-up" data-aos-delay="100">
+                  <form class="php-email-form">
+                    <div class="row">
+                      <div class="col-md-6 mb-3">
+                        <label for="firstName" class="form-label">Họ</label>
+                        <input type="text" class="form-control" id="firstName" name="firstName" value="Uy" required="">
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label for="lastName" class="form-label">Tên</label>
+                        <input type="text" class="form-control" id="lastName" name="lastName" value="Lê" required="">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6 mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" value="leuy091104@gmail.com" required="">
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label for="phone" class="form-label">Số điện thoại</label>
+                        <input type="tel" class="form-control" id="phone" name="phone" value="0961 750 846">
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="birthdate" class="form-label">Ngày sinh</label>
+                      <input type="date" class="form-control" id="birthdate" name="birthdate" value="2004-09-11">
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label d-block">Giới tính</label>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="genderMale" value="male" checked="">
+                        <label class="form-check-label" for="genderMale">Nam</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="female">
+                        <label class="form-check-label" for="genderFemale">Nữ</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="genderOther" value="other">
+                        <label class="form-check-label" for="genderOther">Khác</label>
+                      </div>
+                    </div>
+                    <div class="loading">Đang tải...</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Thông tin của bạn đã được cập nhật. Cảm ơn bạn!</div>
+                    <div class="text-end">
+                      <button type="submit" class="btn btn-save">Lưu thay đổi</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <!-- Addresses Tab -->
+              <div class="tab-pane fade" id="addresses" role="tabpanel" aria-labelledby="addresses-tab">
+                <div class="tab-header">
+                  <h2>Địa chỉ của tôi</h2>
+                  <button class="btn btn-add-address" type="button">
+                    <i class="bi bi-plus-lg"></i> Thêm địa chỉ mới
+                  </button>
+                </div>
+                <div class="addresses-list">
+                  <div class="row">
+                    <!-- Address Item 1 -->
+                    <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                      <div class="address-item">
+                        <div class="address-header">
+                          <h5>Địa chỉ nhà</h5>
+                          <div class="address-actions">
+                            <button class="btn-edit-address" type="button">
+                              <i class="bi bi-pencil"></i>
+                            </button>
+                            <button class="btn-delete-address" type="button">
+                              <i class="bi bi-trash"></i>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="address-content">
+                          <p>123 Đường Lê Duẩn<br>Phường Nguyễn Du<br>Quận Hai Bà Trưng, Hà Nội</p>
+                        </div>
+                        <div class="default-badge">Mặc định</div>
+                      </div>
+                    </div><!-- End Address Item -->
+
+                    <!-- Address Item 2 -->
+                    <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                      <div class="address-item">
+                        <div class="address-header">
+                          <h5>Địa chỉ công ty</h5>
+                          <div class="address-actions">
+                            <button class="btn-edit-address" type="button">
+                              <i class="bi bi-pencil"></i>
+                            </button>
+                            <button class="btn-delete-address" type="button">
+                              <i class="bi bi-trash"></i>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="address-content">
+                          <p>456 Đường Láng Hạ<br>Tầng 5, Tòa nhà Techcombank<br>Quận Đống Đa, Hà Nội</p>
+                        </div>
+                        <button class="btn btn-sm btn-make-default" type="button">Đặt làm mặc định</button>
+                      </div>
+                    </div><!-- End Address Item -->
+                  </div>
+                </div>
+              </div>
+
+              <!-- Notifications Tab -->
+              <div class="tab-pane fade" id="notifications" role="tabpanel" aria-labelledby="notifications-tab">
+                <div class="tab-header">
+                  <h2>Cài đặt thông báo</h2>
+                </div>
+                <div class="notifications-settings" data-aos="fade-up" data-aos-delay="100">
+                  <div class="notification-group">
+                    <h5>Cập nhật đơn hàng</h5>
+                    <div class="notification-item">
+                      <div class="notification-info">
+                        <div class="notification-title">Thay đổi trạng thái đơn hàng</div>
+                        <div class="notification-desc">Nhận thông báo khi trạng thái đơn hàng của bạn thay đổi</div>
+                      </div>
+                      <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="orderStatusNotif" checked="">
+                        <label class="form-check-label" for="orderStatusNotif"></label>
+                      </div>
+                    </div>
+                    <div class="notification-item">
+                      <div class="notification-info">
+                        <div class="notification-title">Cập nhật vận chuyển</div>
+                        <div class="notification-desc">Nhận thông báo về tình trạng vận chuyển và giao hàng</div>
+                      </div>
+                      <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="shippingNotif" checked="">
+                        <label class="form-check-label" for="shippingNotif"></label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="notification-group">
+                    <h5>Hoạt động tài khoản</h5>
+                    <div class="notification-item">
+                      <div class="notification-info">
+                        <div class="notification-title">Cảnh báo bảo mật</div>
+                        <div class="notification-desc">Nhận thông báo về các hoạt động liên quan đến bảo mật</div>
+                      </div>
+                      <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="securityNotif" checked="">
+                        <label class="form-check-label" for="securityNotif"></label>
+                      </div>
+                    </div>
+                    <div class="notification-item">
+                      <div class="notification-info">
+                        <div class="notification-title">Thay đổi mật khẩu</div>
+                        <div class="notification-desc">Nhận thông báo khi mật khẩu của bạn được thay đổi</div>
+                      </div>
+                      <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="passwordNotif" checked="">
+                        <label class="form-check-label" for="passwordNotif"></label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="notification-group">
+                    <h5>Khuyến mãi</h5>
+                    <div class="notification-item">
+                      <div class="notification-info">
+                        <div class="notification-title">Khuyến mãi và ưu đãi</div>
+                        <div class="notification-desc">Nhận thông báo về các ưu đãi và giảm giá đặc biệt</div>
+                      </div>
+                      <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="promoNotif">
+                        <label class="form-check-label" for="promoNotif"></label>
+                      </div>
+                    </div>
+                    <div class="notification-item">
+                      <div class="notification-info">
+                        <div class="notification-title">Sản phẩm mới</div>
+                        <div class="notification-desc">Nhận thông báo khi có sản phẩm mới được thêm vào</div>
+                      </div>
+                      <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="newProductNotif">
+                        <label class="form-check-label" for="newProductNotif"></label>
+                      </div>
+                    </div>
+                    <div class="notification-item">
+                      <div class="notification-info">
+                        <div class="notification-title">Đề xuất cá nhân</div>
+                        <div class="notification-desc">Nhận thông báo với các đề xuất sản phẩm dựa trên sở thích của bạn</div>
+                      </div>
+                      <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="recommendNotif" checked="">
+                        <label class="form-check-label" for="recommendNotif"></label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="notification-actions">
+                    <button type="button" class="btn btn-save">Lưu cài đặt</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Account Section -->
+
+  </main>
+
+  <footer id="footer" class="footer light-background">
+    <div class="footer-main">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-widget footer-about">
+              <a href="index.html" class="logo">
+                <span class="sitename">SmartphoneStore</span>
+              </a>
+              <p>SmartphoneStore - Cửa hàng điện thoại và phụ kiện chính hãng, giá tốt. Cam kết chất lượng, bảo hành uy tín, giao hàng toàn quốc.</p>
+
+              <div class="social-links mt-4">
+                <h5>Kết nối với chúng tôi</h5>
+                <div class="social-icons">
+                  <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                  <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                  <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                  <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                  <a href="#" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+                  <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 col-sm-6">
+            <div class="footer-widget">
+              <h4>Mua sắm</h4>
+              <ul class="footer-links">
+                <li><a href="category.html">Hàng mới về</a></li>
+                <li><a href="category.html">Bán chạy</a></li>
+                <li><a href="category.html">Điện thoại iPhone</a></li>
+                <li><a href="category.html">Điện thoại Samsung</a></li>
+                <li><a href="category.html">Phụ kiện</a></li>
+                <li><a href="category.html">Khuyến mãi</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 col-sm-6">
+            <div class="footer-widget">
+              <h4>Hỗ trợ</h4>
+              <ul class="footer-links">
+                <li><a href="support.html">Trung tâm trợ giúp</a></li>
+                <li><a href="account.html">Tình trạng đơn hàng</a></li>
+                <li><a href="shiping-info.html">Thông tin giao hàng</a></li>
+                <li><a href="return-policy.html">Đổi trả &amp; hoàn tiền</a></li>
+                <li><a href="#">Hướng dẫn mua hàng</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-widget">
+              <h4>Thông tin liên hệ</h4>
+              <div class="footer-contact">
+                <div class="contact-item">
+                  <i class="bi bi-geo-alt"></i>
+                  <span>123 Đường Lê Duẩn, Quận Hai Bà Trưng, Hà Nội</span>
+                </div>
+                <div class="contact-item">
+                  <i class="bi bi-telephone"></i>
+                  <span>0961 750 846</span>
+                </div>
+                <div class="contact-item">
+                  <i class="bi bi-envelope"></i>
+                  <span>leuy091104@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                  <i class="bi bi-clock"></i>
+                  <span>Thứ 2 - Thứ 7: 8h-21h<br>Chủ nhật: 9h-18h</span>
+                </div>
+              </div>
+
+              <div class="app-buttons mt-4">
+                <a href="#" class="app-btn">
+                  <i class="bi bi-apple"></i>
+                  <span>App Store</span>
+                </a>
+                <a href="#" class="app-btn">
+                  <i class="bi bi-google-play"></i>
+                  <span>Google Play</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row gy-3 align-items-center">
+          <div class="col-lg-6 col-md-12">
+            <div class="copyright">
+              <p>© <span>Bản quyền</span> <strong class="sitename">SmartphoneStore</strong>. Đã đăng ký mọi quyền.</p>
+            </div>
+            <div class="credits mt-1">
+              Thiết kế bởi <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-12">
+            <div class="d-flex flex-wrap justify-content-lg-end justify-content-center align-items-center gap-4">
+              <div class="payment-methods">
+                <div class="payment-icons">
+                  <i class="bi bi-credit-card" aria-label="Thẻ tín dụng"></i>
+                  <i class="bi bi-paypal" aria-label="PayPal"></i>
+                  <i class="bi bi-apple" aria-label="Apple Pay"></i>
+                  <i class="bi bi-google" aria-label="Google Pay"></i>
+                  <i class="bi bi-shop" aria-label="Shop Pay"></i>
+                  <i class="bi bi-cash" aria-label="Thanh toán khi nhận hàng"></i>
+                </div>
+              </div>
+
+              <div class="legal-links">
+                <a href="tos.html">Điều khoản</a>
+                <a href="privacy.html">Bảo mật</a>
+                <a href="tos.html">Cookies</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/drift-zoom/Drift.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Ajax Navigation -->
+  <script src="assets/js/ajax-navigation.js"></script>
+
+</body>
+
+</html>
