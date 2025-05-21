@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Trang chủ - SmartphoneStore</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/drift-zoom/drift-basic.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header position-relative">
+    <!-- Top Bar -->
+    <div class="top-bar py-2 d-none d-lg-block">
+      <div class="container-fluid container-xl">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="d-flex align-items-center">
+              <div class="top-bar-item me-4">
+                <i class="bi bi-telephone-fill me-2"></i>
+                <span>Hỗ trợ khách hàng: </span>
+                <a href="tel:+1234567890">0961 750 846</a>
+              </div>
+              <div class="top-bar-item">
+                <i class="bi bi-envelope-fill me-2"></i>
+                <a href="mailto:leuy091104@gmail.com">leuy091104@gmail.com</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="d-flex justify-content-end">
+              <div class="top-bar-item me-4">
+                <a href="track-order.html">
+                  <i class="bi bi-truck me-2"></i>Theo dõi đơn hàng
+                </a>
+              </div>
+              <div class="top-bar-item dropdown me-4">
+                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">
+                  <i class="bi bi-translate me-2"></i>Tiếng Việt
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#"><i class="bi bi-check2 me-2 selected-icon"></i>Tiếng Việt</a></li>
+                  <li><a class="dropdown-item" href="#">English</a></li>
+                  <li><a class="dropdown-item" href="#">Español</a></li>
+                  <li><a class="dropdown-item" href="#">Français</a></li>
+                </ul>
+              </div>
+              <div class="top-bar-item dropdown">
+                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">
+                  <i class="bi bi-currency-dollar me-2"></i>VND
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#"><i class="bi bi-check2 me-2 selected-icon"></i>VND</a></li>
+                  <li><a class="dropdown-item" href="#">USD</a></li>
+                  <li><a class="dropdown-item" href="#">EUR</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Header -->
+    <div class="main-header">
+      <div class="container-fluid container-xl">
+        <div class="d-flex py-3 align-items-center justify-content-between">
+
+          <!-- Logo -->
+          <a href="index.html" class="logo d-flex align-items-center">
+            <!-- Uncomment the line below if you also wish to use an image logo -->
+            <!-- <img src="assets/img/logo.webp" alt=""> -->
+            <h1 class="sitename">Smartphone<span>Store</span></h1>
+          </a>
+
+          <!-- Search -->
+          <form class="search-form desktop-search-form">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Tìm kiếm sản phẩm...">
+              <button class="btn search-btn" type="submit">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+          </form>
+
+          <!-- Actions -->
+          <div class="header-actions d-flex align-items-center justify-content-end">
+
+            <!-- Mobile Search Toggle -->
+            <button class="header-action-btn mobile-search-toggle d-xl-none" type="button" data-bs-toggle="collapse" data-bs-target="#mobileSearch" aria-expanded="false" aria-controls="mobileSearch">
+              <i class="bi bi-search"></i>
+            </button>
+
+            <!-- Account -->
+            <div class="dropdown account-dropdown">
+              <button class="header-action-btn" data-bs-toggle="dropdown">
+                <i class="bi bi-person"></i>
+                <span class="action-text d-none d-md-inline-block">Tài khoản</span>
+              </button>
+              <div class="dropdown-menu">
+                <div class="dropdown-header">
+                  <h6>Chào mừng đến với <span class="sitename">SmaprtphoneStore</span></h6>
+                  <p class="mb-0">Truy cập tài khoản &amp; quản lý đơn hàng</p>
+                </div>
+                <div class="dropdown-body">
+                  <a class="dropdown-item d-flex align-items-center" href="account.html">
+                    <i class="bi bi-person-circle me-2"></i>
+                    <span>Hồ sơ của tôi</span>
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="orders.html">
+                    <i class="bi bi-bag-check me-2"></i>
+                    <span>Đơn hàng của tôi</span>
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="wishlist.html">
+                    <i class="bi bi-heart me-2"></i>
+                    <span>Danh sách yêu thích</span>
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="returns.html">
+                    <i class="bi bi-arrow-return-left me-2"></i>
+                    <span>Đổi trả &amp; Hoàn tiền</span>
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="settings.html">
+                    <i class="bi bi-gear me-2"></i>
+                    <span>Cài đặt</span>
+                  </a>
+                </div>
+                <div class="dropdown-footer">
+                  <a href="login.html" class="btn btn-primary w-100 mb-2">Đăng nhập</a>
+                  <a href="register.html" class="btn btn-outline-primary w-100">Đăng ký</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Wishlist -->
+            <a href="wishlist.html" class="header-action-btn d-none d-md-flex">
+              <i class="bi bi-heart"></i>
+              <span class="action-text d-none d-md-inline-block">Yêu thích</span>
+              <span class="badge">0</span>
+            </a>
+
+            <!-- Cart -->
+            <div class="dropdown cart-dropdown">
+              <button class="header-action-btn" data-bs-toggle="dropdown">
+                <i class="bi bi-cart3"></i>
+                <span class="action-text d-none d-md-inline-block">Giỏ hàng</span>
+                <span class="badge">3</span>
+              </button>
+              <div class="dropdown-menu cart-dropdown-menu">
+                <div class="dropdown-header">
+                  <h6>Giỏ hàng (3)</h6>
+                </div>
+                <div class="dropdown-body">
+                  <div class="cart-items">
+                    <!-- Cart Item 1 -->
+                    <div class="cart-item">
+                      <div class="cart-item-image">
+                        <img src="assets/img/product/iphone/iphone-16-pro-max.webp" alt="iphone-16-pro-max" class="img-fluid">
+                      </div>
+                      <div class="cart-item-content">
+                        <h6 class="cart-item-title">iPhone 16 Pro Max</h6>
+                        <div class="cart-item-meta">1 × 30.490.000đ</div>
+                      </div>
+                      <button class="cart-item-remove">
+                        <i class="bi bi-x"></i>
+                      </button>
+                    </div>
+
+                    <!-- Cart Item 2 -->
+                    <div class="cart-item">
+                      <div class="cart-item-image">
+                        <img src="assets/img/product/samsung/dien-thoai-samsung-galaxy-s25-ultra_3__3.webp" alt="dien-thoai-samsung-galaxy-s25-ultra_3__3" class="img-fluid">
+                      </div>
+                      <div class="cart-item-content">
+                        <h6 class="cart-item-title">Samsung Galaxy S25 Ultra</h6>
+                        <div class="cart-item-meta">1 × 28.490.000đ</div>
+                      </div>
+                      <button class="cart-item-remove">
+                        <i class="bi bi-x"></i>
+                      </button>
+                    </div>
+
+                    <!-- Cart Item 3 -->
+                    <div class="cart-item">
+                      <div class="cart-item-image">
+                        <img src="assets/img/product/xiaomi/xiaomi_14t_2_.webp" alt="xiaomi_14t_2_" class="img-fluid">
+                      </div>
+                      <div class="cart-item-content">
+                        <h6 class="cart-item-title">Xiamoi 14T</h6>
+                        <div class="cart-item-meta">1 × 16.990.000đ</div>
+                      </div>
+                      <button class="cart-item-remove">
+                        <i class="bi bi-x"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="dropdown-footer">
+                  <div class="cart-total">
+                    <span>Tổng cộng:</span>
+                    <span class="cart-total-price">75.970.000</span>
+                  </div>
+                  <div class="cart-actions">
+                    <a href="cart.html" class="btn btn-outline-primary">Xem giỏ hàng</a>
+                    <a href="checkout.html" class="btn btn-primary">Thanh toán</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Mobile Navigation Toggle -->
+            <i class="mobile-nav-toggle d-xl-none bi bi-list me-0"></i>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="header-nav">
+      <div class="container-fluid container-xl position-relative">
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html" class="active">Trang chủ</a></li>
+            <li><a href="about.html">Giới thiệu</a></li>
+            <li class="dropdown"><a href="category.html"><span>Sản phẩm</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="#">iPhone</a></li>
+                <li><a href="#">Samsung</a></li>
+                <li><a href="#">Xiaomi</a></li>
+                <li><a href="#">Oppo</a></li>
+                <li class="dropdown"><a href="#"><span>Phụ kiện</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="#">Tai nghe Bluetooth</a></li>
+                    <li><a href="#">IEM</a></li>
+                    <li><a href="#">Loa Bluetooth</a></li>
+                    <li><a href="#">Dây & củ sạc</a></li>
+                    <li><a href="#">Ốp lưng</a></li>
+                    <li><a href="#">Kính cường lực</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a href="cart.html">Giỏ hàng</a></li>
+            <li><a href="checkout.html">Thanh toán</a></li>
+
+            <li><a href="contact.html">Liên hệ</a></li>
+
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Announcement Bar -->
+    <div class="announcement-bar py-2">
+      <div class="container-fluid container-xl">
+        <div class="announcement-slider swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": 1,
+              "effect": "slide",
+              "direction": "vertical"
+            }
+          </script>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">🚚 Miễn phí vận chuyển trong bán kính 3km</div>
+            <div class="swiper-slide">💰 Bảo hành đổi trả trong 30 ngày</div>
+            <div class="swiper-slide">🎁 Giảm 20% cho đơn hàng đầu tiên - Mã: FIRST20</div>
+            <div class="swiper-slide">⚡ Flash Sale! Giảm giá lên đến 70% cho các sản phẩm được chọn</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Search Form -->
+    <div class="collapse" id="mobileSearch">
+      <div class="container">
+        <form class="search-form">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search for products...">
+            <button class="btn search-btn" type="submit">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section class="ecommerce-hero-2 hero section" id="hero">
+      <div class="container">
+        <div class="hero-slider swiper init-swiper" data-aos="fade-up">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 800,
+              "autoplay": {
+                "delay": 5000
+              },
+              "effect": "fade",
+              "fadeEffect": {
+                "crossFade": true
+              },
+              "navigation": {
+                "nextEl": ".swiper-button-next",
+                "prevEl": ".swiper-button-prev"
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+            <!-- New Collection Slide -->
+            <div class="swiper-slide slide-new">
+              <div class="row align-items-center">
+                <div class="col-lg-6 content-col" data-aos="fade-right" data-aos-delay="100">
+                  <div class="slide-content">
+                    <span class="slide-badge">Sản phẩm mới</span>
+                    <h1>Khám phá các sản phẩm <span>mới nhất</span> của chúng tôi</h1>
+                    <p>Khám phá ngay những mẫu điện thoại mới nhất với thiết kế hiện đại, hiệu năng mạnh mẽ và công nghệ tiên tiến. Chúng tôi cam kết mang đến trải nghiệm mua sắm tốt nhất với giá cả cạnh tranh và chính sách bảo hành uy tín.</p>
+                    <div class="slide-cta">
+                      <a href="#" class="btn btn-shop">Mua ngay <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 image-col" data-aos="fade-left" data-aos-delay="200">
+                  <div class="product-showcase">
+                    <div class="product-grid">
+                      <div class="product-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="product-image">
+                          <img src="assets/img/products/iphone/iphone-16-pro-max.webp" alt="iphone-16-pro-max">
+                        </div>
+                        <div class="product-info">
+                          <h4>iPhone 16 Pro Max</h4>
+                          <span class="price">30.490.000đ</span>
+                        </div>
+                      </div>
+                      <div class="product-item" data-aos="fade-up" data-aos-delay="400">
+                        <div class="product-image">
+                          <img src="assets/img/products/samsung/samsung-galaxy-s25-ultra.webp" alt="dien-thoai-samsung-galaxy-s25-ultra_3__3">
+                        </div>
+                        <div class="product-info">
+                          <h4>Samsung Galaxy S25 Ultra</h4>
+                          <span class="price">28.490.000đ</span>
+                        </div>
+                      </div>
+                      <div class="product-item" data-aos="fade-up" data-aos-delay="500">
+                        <div class="product-image">
+                          <img src="assets/img/products/xiaomi/xiaomi_14t_pro.webp" alt="xiaomi_14t_2_">
+                        </div>
+                        <div class="product-info">
+                          <h4>Xiamo 14T</h4>
+                          <span class="price">12.490.000đ</span>
+                        </div>
+                      </div>
+                      <div class="product-item" data-aos="fade-up" data-aos-delay="600">
+                        <div class="product-image">
+                          <img src="assets/img/products/xiaomi/xiaomi_14t.webp" alt="xiaomi_14t_pro_1_">
+                        </div>
+                        <div class="product-info">
+                          <h4>Xiaomi 14T Pro</h4>
+                          <span class="price">16.990.000đ</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sale Products Slide -->
+            <!-- <div class="swiper-slide slide-sale">
+              <div class="row align-items-center">
+                <div class="col-lg-6 content-col" data-aos="fade-right" data-aos-delay="100">
+                  <div class="slide-content">
+                    <span class="slide-badge">Thời gian có hạn</span>
+                    <h1>Giảm giá mùa <span>lên đến 30%</span></h1>
+                    <p>Cơ hội mua sắm điện thoại cao cấp với giá tốt nhất trong năm. Áp dụng cho tất cả các sản phẩm iPhone, Samsung, Xiaomi và phụ kiện chính hãng. Chương trình chỉ diễn ra trong thời gian có hạn, hãy nhanh tay đặt hàng ngay hôm nay!</p>
+                    <div class="slide-cta">
+                      <a href="#" class="btn btn-shop">Mua ngay <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                    <div class="countdown-container">
+                      <div class="countdown-label">Kết thúc sau:</div>
+                      <div class="countdown d-flex" data-count="2025/6/15">
+                        <div>
+                          <h3 class="count-days"></h3>
+                          <h4>Ngày</h4>
+                        </div>
+                        <div>
+                          <h3 class="count-hours"></h3>
+                          <h4>Giờ</h4>
+                        </div>
+                        <div>
+                          <h3 class="count-minutes"></h3>
+                          <h4>Phút</h4>
+                        </div>
+                        <div>
+                          <h3 class="count-seconds"></h3>
+                          <h4>Giây</h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 image-col" data-aos="fade-left" data-aos-delay="200">
+                  <div class="sale-showcase">
+                    <div class="main-product">
+                      <img src="assets/img/product/others/sale1.png" alt="Sale Product">
+                      <div class="discount-badge">
+                        <span class="percent">30%</span>
+                        <span class="text">OFF</span>
+                      </div>
+                    </div>
+                    <div class="floating-tag" data-aos="zoom-in" data-aos-delay="300">
+                      <div class="tag-content">
+                        <span class="tag-label">Best Seller</span>
+                        <span class="tag-price">
+                          <span class="old-price">$129.99</span>
+                          <span class="new-price">$64.99</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
+            <!-- Featured Products Slide -->
+            <div class="swiper-slide slide-featured">
+              <div class="row align-items-center">
+                <div class="col-lg-6 content-col" data-aos="fade-right" data-aos-delay="100">
+                  <div class="slide-content">
+                    <span class="slide-badge">Sản phẩm nổi bật</span>
+                    <h1>Sản phẩm <span>chất lượng</span> cao cấp</h1>
+                    <p>iPhone 16 Pro Max - Đẳng cấp mới trong thế giới smartphone. Với chip A18 Pro mạnh mẽ, camera 48MP tiên tiến và màn hình Super Retina XDR 6.9 inch, mang đến trải nghiệm đỉnh cao cho người dùng. Thiết kế titan cao cấp, khả năng chống nước IP68 và thời lượng pin ấn tượng.</p>
+                    <div class="slide-cta">
+                      <a href="#" class="btn btn-shop">Xem sản phẩm <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                    <div class="feature-list">
+                      <div class="feature-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Chip A18 Pro mạnh mẽ</span>
+                      </div>
+                      <div class="feature-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Camera 48MP tiên tiến</span>
+                      </div>
+                      <div class="feature-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Bảo hành chính hãng 12 tháng</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 image-col" data-aos="fade-left" data-aos-delay="200">
+                  <div class="featured-showcase">
+                    <div class="featured-image">
+                      <img src="assets/img/products/iphone/iphone-16-pro-max-1024x1024.jpg" alt="iphone-16-pro-max">
+                      <div class="featured-badge">
+                        <i class="bi bi-star-fill"></i>
+                        <span>Nổi bật</span>
+                      </div>
+                    </div>
+                    <div class="floating-review" data-aos="fade-up" data-aos-delay="300">
+                      <div class="review-stars">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                      </div>
+                      <div class="review-text">
+                        "Hiệu năng và camera xuất sắc"
+                      </div>
+                      <div class="review-author">
+                        - Khách hàng hài lòng
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </section><!-- /Hero Section -->
+
+    <!-- Best Sellers Section -->
+    <section id="best-sellers" class="best-sellers section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Sản phẩm bán chạy</h2>
+        <p>Những sản phẩm được yêu thích nhất của chúng tôi</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-4">
+          <!-- Product 1 -->
+          <div class="col-6 col-lg-3">
+            <div class="product-card" data-aos="zoom-in">
+              <div class="product-image">
+                <img src="assets/img/products/iphone/iphone-16-pro-max-1024x1024.jpg" class="main-image img-fluid" alt="iPhone 16 Pro Max">
+                <img src="assets/img/products/iphone/iphone-16-pro-max-1024x1024.jpg" class="hover-image img-fluid" alt="iPhone 16 Pro Max Variant">
+                <div class="product-overlay">
+                  <div class="product-actions">
+                    <button type="button" class="action-btn" data-bs-toggle="tooltip" title="Xem nhanh">
+                      <i class="bi bi-eye"></i>
+                    </button>
+                    <button type="button" class="action-btn" data-bs-toggle="tooltip" title="Thêm vào giỏ">
+                      <i class="bi bi-cart-plus"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="product-details">
+                <div class="product-category">iPhone</div>
+                <h4 class="product-title"><a href="product-details.html">iPhone 16 Pro Max</a></h4>
+                <div class="product-meta">
+                  <div class="product-price">30.490.000đ</div>
+                  <div class="product-rating">
+                    <i class="bi bi-star-fill"></i>
+                    4.9 <span>(128)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="col-6 col-lg-3">
+            <div class="product-card" data-aos="zoom-in" data-aos-delay="100">
+              <div class="product-image">
+                <img src="assets/img/products/samsung/samsung-galaxy-s25-1024x1024.jpg" class="main-image img-fluid" alt="Samsung Galaxy S25 Ultra">
+                <img src="assets/img/products/samsung/samsung-galaxy-s25-1024x1024.jpg" class="hover-image img-fluid" alt="Samsung Galaxy S25 Ultra Variant">
+                <div class="product-overlay">
+                  <div class="product-actions">
+                    <button type="button" class="action-btn" data-bs-toggle="tooltip" title="Xem nhanh">
+                      <i class="bi bi-eye"></i>
+                    </button>
+                    <button type="button" class="action-btn" data-bs-toggle="tooltip" title="Thêm vào giỏ">
+                      <i class="bi bi-cart-plus"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="product-badge new">Mới</div>
+              </div>
+              <div class="product-details">
+                <div class="product-category">Samsung</div>
+                <h4 class="product-title"><a href="product-details.html">Samsung Galaxy S25 Ultra</a></h4>
+                <div class="product-meta">
+                  <div class="product-price">28.490.000đ</div>
+                  <div class="product-rating">
+                    <i class="bi bi-star-fill"></i>
+                    4.8 <span>(95)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="col-6 col-lg-3">
+            <div class="product-card" data-aos="zoom-in" data-aos-delay="200">
+              <div class="product-image">
+                <img src="assets/img/products/xiaomi/xiaomi-14t-1024x1024.jpg" class="main-image img-fluid" alt="Xiaomi 14T">
+                <img src="assets/img/products/xiaomi/xiaomi-14t-1024x1024.jpg" class="hover-image img-fluid" alt="Xiaomi 14T Variant">
+                <div class="product-overlay">
+                  <div class="product-actions">
+                    <button type="button" class="action-btn" data-bs-toggle="tooltip" title="Xem nhanh">
+                      <i class="bi bi-eye"></i>
+                    </button>
+                    <button type="button" class="action-btn" data-bs-toggle="tooltip" title="Thêm vào giỏ">
+                      <i class="bi bi-cart-plus"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="product-badge sale">-15%</div>
+              </div>
+              <div class="product-details">
+                <div class="product-category">Xiaomi</div>
+                <h4 class="product-title"><a href="product-details.html">Xiaomi 14T</a></h4>
+                <div class="product-meta">
+                  <div class="product-price">
+                    12.490.000đ
+                    <span class="original-price">14.990.000đ</span>
+                  </div>
+                  <div class="product-rating">
+                    <i class="bi bi-star-fill"></i>
+                    4.7 <span>(76)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="col-6 col-lg-3">
+            <div class="product-card" data-aos="zoom-in" data-aos-delay="300">
+              <div class="product-image">
+                <img src="assets/img/products/xiaomi/xiaomi-14t-pro-1024x1024.jpg" class="main-image img-fluid" alt="Xiaomi 14T Pro">
+                <img src="assets/img/products/xiaomi/xiaomi-14t-pro-1024x1024.jpg" class="hover-image img-fluid" alt="Xiaomi 14T Pro Variant">
+                <div class="product-overlay">
+                  <div class="product-actions">
+                    <button type="button" class="action-btn" data-bs-toggle="tooltip" title="Xem nhanh">
+                      <i class="bi bi-eye"></i>
+                    </button>
+                    <button type="button" class="action-btn" data-bs-toggle="tooltip" title="Thêm vào giỏ">
+                      <i class="bi bi-cart-plus"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="product-details">
+                <div class="product-category">Xiaomi</div>
+                <h4 class="product-title"><a href="product-details.html">Xiaomi 14T Pro</a></h4>
+                <div class="product-meta">
+                  <div class="product-price">16.990.000đ</div>
+                  <div class="product-rating">
+                    <i class="bi bi-star-fill"></i>
+                    4.8 <span>(82)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Best Sellers Section -->
+
+    <!-- Product List Section -->
+    <section id="product-list" class="product-list section">
+
+      <div class="container isotope-layout" data-aos="fade-up" data-aos-delay="100" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+        <div class="row">
+          <div class="col-12">
+            <div class="product-filters isotope-filters mb-5 d-flex justify-content-center" data-aos="fade-up">
+              <ul class="d-flex flex-wrap gap-2 list-unstyled">
+                <li class="filter-active" data-filter="*">Tất cả</li>
+                <li data-filter=".filter-iphone">iPhone</li>
+                <li data-filter=".filter-samsung">Samsung</li>
+                <li data-filter=".filter-xiaomi">Xiaomi</li>
+                <li data-filter=".filter-accessories">Phụ kiện</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="row product-container isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+          <!-- Product Item 1 -->
+          <div class="col-md-6 col-lg-3 product-item isotope-item filter-iphone">
+            <div class="product-card">
+              <div class="product-image">
+                <span class="badge">Mới</span>
+                <img src="assets/img/products/iphone/iphone-16-pro-max-1024x1024.jpg" alt="iPhone 16 Pro Max" class="img-fluid main-img">
+                <img src="assets/img/products/iphone/iphone-16-pro-max-1024x1024.jpg" alt="iPhone 16 Pro Max" class="img-fluid hover-img">
+                <div class="product-overlay">
+                  <a href="cart.html" class="btn-cart"><i class="bi bi-cart-plus"></i> Thêm vào giỏ</a>
+                  <div class="product-actions">
+                    <a href="#" class="action-btn"><i class="bi bi-heart"></i></a>
+                    <a href="#" class="action-btn"><i class="bi bi-eye"></i></a>
+                    <a href="#" class="action-btn"><i class="bi bi-arrow-left-right"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="product-info">
+                <h5 class="product-title"><a href="product-details.html">iPhone 16 Pro Max</a></h5>
+                <div class="product-price">
+                  <span class="current-price">30.490.000đ</span>
+                </div>
+                <div class="product-rating">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <span>(128)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Item 2 -->
+          <div class="col-md-6 col-lg-3 product-item isotope-item filter-samsung">
+            <div class="product-card">
+              <div class="product-image">
+                <span class="badge">Mới</span>
+                <img src="assets/img/products/samsung/samsung-galaxy-s25-1024x1024.jpg" alt="Samsung Galaxy S25 Ultra" class="img-fluid main-img">
+                <img src="assets/img/products/samsung/samsung-galaxy-s25-1024x1024.jpg" alt="Samsung Galaxy S25 Ultra" class="img-fluid hover-img">
+                <div class="product-overlay">
+                  <a href="cart.html" class="btn-cart"><i class="bi bi-cart-plus"></i> Thêm vào giỏ</a>
+                  <div class="product-actions">
+                    <a href="#" class="action-btn"><i class="bi bi-heart"></i></a>
+                    <a href="#" class="action-btn"><i class="bi bi-eye"></i></a>
+                    <a href="#" class="action-btn"><i class="bi bi-arrow-left-right"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="product-info">
+                <h5 class="product-title"><a href="product-details.html">Samsung Galaxy S25 Ultra</a></h5>
+                <div class="product-price">
+                  <span class="current-price">28.490.000đ</span>
+                </div>
+                <div class="product-rating">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                  <span>(95)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Item 3 -->
+          <div class="col-md-6 col-lg-3 product-item isotope-item filter-xiaomi">
+            <div class="product-card">
+              <div class="product-image">
+                <span class="badge">Giảm giá</span>
+                <img src="assets/img/products/xiaomi/xiaomi-14t-1024x1024.jpg" alt="Xiaomi 14T" class="img-fluid main-img">
+                <img src="assets/img/products/xiaomi/xiaomi-14t-1024x1024.jpg" alt="Xiaomi 14T" class="img-fluid hover-img">
+                <div class="product-overlay">
+                  <a href="cart.html" class="btn-cart"><i class="bi bi-cart-plus"></i> Thêm vào giỏ</a>
+                  <div class="product-actions">
+                    <a href="#" class="action-btn"><i class="bi bi-heart"></i></a>
+                    <a href="#" class="action-btn"><i class="bi bi-eye"></i></a>
+                    <a href="#" class="action-btn"><i class="bi bi-arrow-left-right"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="product-info">
+                <h5 class="product-title"><a href="product-details.html">Xiaomi 14T</a></h5>
+                <div class="product-price">
+                  <span class="current-price">12.490.000đ</span>
+                  <span class="old-price">14.990.000đ</span>
+                </div>
+                <div class="product-rating">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star"></i>
+                  <span>(76)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Item 4 -->
+          <div class="col-md-6 col-lg-3 product-item isotope-item filter-accessories">
+            <div class="product-card">
+              <div class="product-image">
+                <img src="assets/img/products/accessories/airpod-pro-2-1024x1024.webp" alt="AirPods Pro 2" class="img-fluid main-img">
+                <img src="assets/img/products/accessories/airpod-pro-2-1024x1024.webp" alt="AirPods Pro 2" class="img-fluid hover-img">
+                <div class="product-overlay">
+                  <a href="cart.html" class="btn-cart"><i class="bi bi-cart-plus"></i> Thêm vào giỏ</a>
+                  <div class="product-actions">
+                    <a href="#" class="action-btn"><i class="bi bi-heart"></i></a>
+                    <a href="#" class="action-btn"><i class="bi bi-eye"></i></a>
+                    <a href="#" class="action-btn"><i class="bi bi-arrow-left-right"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="product-info">
+                <h5 class="product-title"><a href="product-details.html">AirPods Pro 2</a></h5>
+                <div class="product-price">
+                  <span class="current-price">5.990.000đ</span>
+                </div>
+                <div class="product-rating">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <span>(156)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Item 5 -->
+          <div class="col-md-6 col-lg-3 product-item isotope-item filter-iphone">
+            <div class="product-card">
+              <div class="product-image">
+                <span class="badge">Giảm giá</span>
+                <img src="assets/img/products/iphone/iphone-15-pro-max-1024x1024.webp" alt="iPhone 15 Pro Max" class="img-fluid main-img">
+                <img src="assets/img/products/iphone/iphone-15-pro-max-1024x1024.webp" alt="iPhone 15 Pro Max" class="img-fluid hover-img">
+                <div class="product-overlay">
+                  <a href="cart.html" class="btn-cart"><i class="bi bi-cart-plus"></i> Thêm vào giỏ</a>
+                  <div class="product-actions">
+                    <a href="#" class="action-btn"><i class="bi bi-heart"></i></a>
+                    <a href="#" class="action-btn"><i class="bi bi-eye"></i></a>
+                    <a href="#" class="action-btn"><i class="bi bi-arrow-left-right"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="product-info">
+                <h5 class="product-title"><a href="product-details.html">iPhone 15 Pro Max</a></h5>
+                <div class="product-price">
+                  <span class="current-price">27.990.000đ</span>
+                  <span class="old-price">29.990.000đ</span>
+                </div>
+                <div class="product-rating">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                  <span>(203)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Item 6 -->
+          <div class="col-md-6 col-lg-3 product-item isotope-item filter-samsung">
+            <div class="product-card">
+              <div class="product-image">
+                <img src="assets/img/products/samsung/samsung-galaxy-z-fold-5-1024x1024.webp" alt="Samsung Galaxy Z Fold 5" class="img-fluid main-img">
+                <img src="assets/img/products/samsung/samsung-galaxy-z-fold-5-1024x1024.webp" alt="Samsung Galaxy Z Fold 5" class="img-fluid hover-img">
+                <div class="product-overlay">
+                  <a href="cart.html" class="btn-cart"><i class="bi bi-cart-plus"></i> Thêm vào giỏ</a>
+                  <div class="product-actions">
+                    <a href="#" class="action-btn"><i class="bi bi-heart"></i></a>
+                    <a href="#" class="action-btn"><i class="bi bi-eye"></i></a>
+                    <a href="#" class="action-btn"><i class="bi bi-arrow-left-right"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="product-info">
+                <h5 class="product-title"><a href="product-details.html">Samsung Galaxy Z Fold 5</a></h5>
+                <div class="product-price">
+                  <span class="current-price">32.990.000đ</span>
+                </div>
+                <div class="product-rating">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star"></i>
+                  <span>(89)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Item 7 -->
+          <div class="col-md-6 col-lg-3 product-item isotope-item filter-xiaomi">
+            <div class="product-card">
+              <div class="product-image">
+                <span class="badge">Mới</span>
+                <img src="assets/img/products/xiaomi/xiaomi-14t-pro-1024x1024.jpg" alt="Xiaomi 14T Pro" class="img-fluid main-img">
+                <img src="assets/img/products/xiaomi/xiaomi-14t-pro-1024x1024.jpg" alt="Xiaomi 14T Pro" class="img-fluid hover-img">
+                <div class="product-overlay">
+                  <a href="cart.html" class="btn-cart"><i class="bi bi-cart-plus"></i> Thêm vào giỏ</a>
+                  <div class="product-actions">
+                    <a href="#" class="action-btn"><i class="bi bi-heart"></i></a>
+                    <a href="#" class="action-btn"><i class="bi bi-eye"></i></a>
+                    <a href="#" class="action-btn"><i class="bi bi-arrow-left-right"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="product-info">
+                <h5 class="product-title"><a href="product-details.html">Xiaomi 14T Pro</a></h5>
+                <div class="product-price">
+                  <span class="current-price">16.990.000đ</span>
+                </div>
+                <div class="product-rating">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                  <span>(67)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Item 8 -->
+          <div class="col-md-6 col-lg-3 product-item isotope-item filter-xiaomi">
+            <div class="product-card">
+              <div class="product-image">
+                <span class="badge">Giảm giá</span>
+                <img src="assets/img/products/xiaomi/xiaomi-redmi-note-14-pro-4g-1024x1024.jpg" alt="Samsung Galaxy Watch 6" class="img-fluid main-img">
+                <img src="assets/img/products/xiaomi/xiaomi-redmi-note-14-pro-4g-1024x1024.jpg" alt="Samsung Galaxy Watch 6" class="img-fluid hover-img">
+                <div class="product-overlay">
+                  <a href="cart.html" class="btn-cart"><i class="bi bi-cart-plus"></i> Thêm vào giỏ</a>
+                  <div class="product-actions">
+                    <a href="#" class="action-btn"><i class="bi bi-heart"></i></a>
+                    <a href="#" class="action-btn"><i class="bi bi-eye"></i></a>
+                    <a href="#" class="action-btn"><i class="bi bi-arrow-left-right"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="product-info">
+                <h5 class="product-title"><a href="product-details.html">Xiaomi Redmi Note 14</a></h5>
+                <div class="product-price">
+                  <span class="current-price">6.990.000đ</span>
+                  <span class="old-price">7.990.000đ</span>
+                </div>
+                <div class="product-rating">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <span>(112)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="text-center mt-5" data-aos="fade-up">
+          <a href="category.html" class="view-all-btn">Xem tất cả sản phẩm <i class="bi bi-arrow-right"></i></a>
+        </div>
+
+      </div>
+
+    </section><!-- /Product List Section -->
+
+  </main>
+
+  <footer id="footer" class="footer light-background">
+    <div class="footer-main">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-widget footer-about">
+              <a href="index.html" class="logo">
+                <span class="sitename">SmartphoneStore</span>
+              </a>
+              <p>Chúng tôi cung cấp những sản phẩm điện thoại di động và phụ kiện chính hãng với chất lượng cao và giá cả cạnh tranh. Hãy khám phá bộ sưu tập của chúng tôi ngay hôm nay.</p>
+
+              <div class="social-links mt-4">
+                <h5>Kết nối với chúng tôi</h5>
+                <div class="social-icons">
+                  <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                  <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                  <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                  <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                  <a href="#" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+                  <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 col-sm-6">
+            <div class="footer-widget">
+              <h4>Cửa hàng</h4>
+              <ul class="footer-links">
+                <li><a href="category.html">Hàng mới về</a></li>
+                <li><a href="category.html">Bán chạy nhất</a></li>
+                <li><a href="category.html">iPhone</a></li>
+                <li><a href="category.html">Samsung</a></li>
+                <li><a href="category.html">Xiaomi</a></li>
+                <li><a href="category.html">Phụ kiện</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 col-sm-6">
+            <div class="footer-widget">
+              <h4>Hỗ trợ</h4>
+              <ul class="footer-links">
+                <li><a href="support.html">Trung tâm trợ giúp</a></li>
+                <li><a href="account.html">Trạng thái đơn hàng</a></li>
+                <li><a href="shiping-info.html">Thông tin vận chuyển</a></li>
+                <li><a href="return-policy.html">Đổi trả &amp; Hoàn tiền</a></li>
+                <li><a href="#">Hướng dẫn mua hàng</a></li>
+                <li><a href="contact.html">Liên hệ chúng tôi</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-widget">
+              <h4>Thông tin liên hệ</h4>
+              <div class="footer-contact">
+                <div class="contact-item">
+                  <i class="bi bi-geo-alt"></i>
+                  <span>123 Đường ABC, Quận Nam Từ Liêm, Hà Nội</span>
+                </div>
+                <div class="contact-item">
+                  <i class="bi bi-telephone"></i>
+                  <span>0961 750 846</span>
+                </div>
+                <div class="contact-item">
+                  <i class="bi bi-envelope"></i>
+                  <span>leuy091104@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                  <i class="bi bi-clock"></i>
+                  <span>Thứ Hai - Thứ Sáu: 8h - 20h<br>Thứ Bảy - Chủ Nhật: 9h - 18h</span>
+                </div>
+              </div>
+
+              <div class="app-buttons mt-4">
+                <a href="#" class="app-btn">
+                  <i class="bi bi-apple"></i>
+                  <span>App Store</span>
+                </a>
+                <a href="#" class="app-btn">
+                  <i class="bi bi-google-play"></i>
+                  <span>Google Play</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row gy-3 align-items-center">
+          <div class="col-lg-6 col-md-12">
+            <div class="copyright">
+              <p>© <span>Bản quyền</span> <strong class="sitename">SmartphoneStore</strong>. Đã đăng ký bản quyền.</p>
+            </div>
+            <div class="credits mt-1">
+              Thiết kế bởi <a href="https://www.facebook.com/legiauy.73/?locale=vi_VN">Lê Gia Uy</a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-12">
+            <div class="d-flex flex-wrap justify-content-lg-end justify-content-center align-items-center gap-4">
+              <div class="payment-methods">
+                <div class="payment-icons">
+                  <i class="bi bi-credit-card" aria-label="Thẻ tín dụng"></i>
+                  <i class="bi bi-paypal" aria-label="PayPal"></i>
+                  <i class="bi bi-apple" aria-label="Apple Pay"></i>
+                  <i class="bi bi-google" aria-label="Google Pay"></i>
+                  <i class="bi bi-shop" aria-label="Shop Pay"></i>
+                  <i class="bi bi-cash" aria-label="Thanh toán khi nhận hàng"></i>
+                </div>
+              </div>
+
+              <div class="legal-links">
+                <a href="tos.html">Điều khoản</a>
+                <a href="privacy.html">Bảo mật</a>
+                <a href="tos.html">Cookie</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/drift-zoom/Drift.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
