@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Giỏ hàng - SmartphoneStore</title>
+  <title>Login - FashionStore Bootstrap Template</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -37,7 +37,7 @@
   ======================================================== -->
 </head>
 
-<body class="cart-page">
+<body class="login-page">
 
   <header id="header" class="header position-relative">
     <!-- Top Bar -->
@@ -264,7 +264,7 @@
             <li><a href="about.html">Giới thiệu</a></li>
             <li><a href="category.html">Sản phẩm</a></li>
             <li><a href="account.html">Tài khoản</a></li>
-            <li><a href="cart.html" class="active">Giỏ hàng</a></li>
+            <li><a href="cart.html">Giỏ hàng</a></li>
             <li><a href="checkout.html">Thanh toán</a></li>
 
             <li><a href="contact.html">Liên hệ</a></li>
@@ -319,275 +319,65 @@
   <main class="main">
 
     <!-- Page Title -->
-    <div class="page-title light-background">
+    <div class="page-title light-background position-relative">
       <div class="container">
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Trang chủ</a></li>
-            <li class="current">Giỏ hàng</li>
+            <li class="current">Đăng nhập</li>
           </ol>
         </nav>
-        <h1>Giỏ hàng</h1>
+        <h1>Đăng nhập</h1>
       </div>
     </div><!-- End Page Title -->
 
-    <!-- Cart Section -->
-    <section id="cart" class="cart section">
-
+    <!-- Login Section -->
+    <section id="login" class="login section">
       <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row justify-content-center">
+          <div class="col-lg-5 col-md-8" data-aos="zoom-in" data-aos-delay="200">
+            <div class="login-form-wrapper">
+              <div class="login-header text-center">
+                <h2>Đăng nhập</h2>
+                <p>Chào mừng trở lại! Vui lòng nhập thông tin của bạn</p>
+              </div>
 
-        <div class="row">
-          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-            <div class="cart-items">
-              <div class="cart-header d-none d-lg-block">
-                <div class="row align-items-center">
-                  <div class="col-lg-6">
-                    <h5>Sản phẩm</h5>
-                  </div>
-                  <div class="col-lg-2 text-center">
-                    <h5>Giá</h5>
-                  </div>
-                  <div class="col-lg-2 text-center">
-                    <h5>Số lượng</h5>
-                  </div>
-                  <div class="col-lg-2 text-center">
-                    <h5>Tổng</h5>
-                  </div>
+              <form>
+                <div class="mb-4">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" placeholder="Nhập email của bạn" required="" autocomplete="email">
                 </div>
-              </div>
 
-              <!-- Cart Item 1 -->
-              <div class="cart-item">
-                <div class="row align-items-center">
-                  <div class="col-lg-6 col-12 mt-3 mt-lg-0 mb-lg-0 mb-3">
-                    <div class="product-info d-flex align-items-center">
-                      <div class="product-image">
-                        <img src="assets/img/products/iphone/iphone-16-pro-max.webp" alt="iPhone 16 Pro Max" class="img-fluid" loading="lazy">
-                      </div>
-                      <div class="product-details">
-                        <h6 class="product-title">iPhone 16 Pro Max 256GB</h6>
-                        <div class="product-meta">
-                          <span class="product-color">Màu: Titan tự nhiên</span>
-                          <span class="product-size">Dung lượng: 256GB</span>
-                        </div>
-                        <button class="remove-item" type="button">
-                          <i class="bi bi-trash"></i> Xóa
-                        </button>
-                      </div>
-                    </div>
+                <div class="mb-3">
+                  <div class="d-flex justify-content-between">
+                    <label for="password" class="form-label">Mật khẩu</label>
+                    <a href="#" class="forgot-link">Quên mật khẩu?</a>
                   </div>
-                  <div class="col-lg-2 col-12 mt-3 mt-lg-0 text-center">
-                    <div class="price-tag">
-                      <span class="current-price">30.490.000đ</span>
-                    </div>
-                  </div>
-                  <div class="col-lg-2 col-12 mt-3 mt-lg-0 text-center">
-                    <div class="quantity-selector">
-                      <button class="quantity-btn decrease">
-                        <i class="bi bi-dash"></i>
-                      </button>
-                      <input type="number" class="quantity-input" value="1" min="1" max="10">
-                      <button class="quantity-btn increase">
-                        <i class="bi bi-plus"></i>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="col-lg-2 col-12 mt-3 mt-lg-0 text-center">
-                    <div class="item-total">
-                      <span>30.490.000đ</span>
-                    </div>
-                  </div>
+                  <input type="password" class="form-control" id="password" placeholder="Nhập mật khẩu của bạn" required="" autocomplete="current-password">
                 </div>
-              </div><!-- End Cart Item -->
 
-              <!-- Cart Item 2 -->
-              <div class="cart-item">
-                <div class="row align-items-center">
-                  <div class="col-lg-6 col-12 mt-3 mt-lg-0 mb-lg-0 mb-3">
-                    <div class="product-info d-flex align-items-center">
-                      <div class="product-image">
-                        <img src="assets/img/products/samsung/samsung-galaxy-s25-ultra.webp" alt="Samsung Galaxy S25 Ultra" class="img-fluid" loading="lazy">
-                      </div>
-                      <div class="product-details">
-                        <h6 class="product-title">Samsung Galaxy S25 Ultra 256GB</h6>
-                        <div class="product-meta">
-                          <span class="product-color">Màu: Đen</span>
-                          <span class="product-size">Dung lượng: 256GB</span>
-                        </div>
-                        <button class="remove-item" type="button">
-                          <i class="bi bi-trash"></i> Xóa
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-2 col-12 mt-3 mt-lg-0 text-center">
-                    <div class="price-tag">
-                      <span class="current-price">28.490.000đ</span>
-                      <span class="original-price">29.990.000đ</span>
-                    </div>
-                  </div>
-                  <div class="col-lg-2 col-12 mt-3 mt-lg-0 text-center">
-                    <div class="quantity-selector">
-                      <button class="quantity-btn decrease">
-                        <i class="bi bi-dash"></i>
-                      </button>
-                      <input type="number" class="quantity-input" value="1" min="1" max="10">
-                      <button class="quantity-btn increase">
-                        <i class="bi bi-plus"></i>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="col-lg-2 col-12 mt-3 mt-lg-0 text-center">
-                    <div class="item-total">
-                      <span>28.490.000đ</span>
-                    </div>
-                  </div>
+                <div class="mb-4 form-check">
+                  <input type="checkbox" class="form-check-input" id="remember">
+                  <label class="form-check-label" for="remember">Ghi nhớ trong 30 ngày</label>
                 </div>
-              </div><!-- End Cart Item -->
 
-              <!-- Cart Item 3 -->
-              <div class="cart-item">
-                <div class="row align-items-center">
-                  <div class="col-lg-6 col-12 mt-3 mt-lg-0 mb-lg-0 mb-3">
-                    <div class="product-info d-flex align-items-center">
-                      <div class="product-image">
-                        <img src="assets/img/products/xiaomi/xiaomi_14t.webp" alt="Xiaomi 14T" class="img-fluid" loading="lazy">
-                      </div>
-                      <div class="product-details">
-                        <h6 class="product-title">Xiaomi 14T 256GB</h6>
-                        <div class="product-meta">
-                          <span class="product-color">Màu: Xanh</span>
-                          <span class="product-size">Dung lượng: 256GB</span>
-                        </div>
-                        <button class="remove-item" type="button">
-                          <i class="bi bi-trash"></i> Xóa
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-2 col-12 mt-3 mt-lg-0 text-center">
-                    <div class="price-tag">
-                      <span class="current-price">16.990.000đ</span>
-                    </div>
-                  </div>
-                  <div class="col-lg-2 col-12 mt-3 mt-lg-0 text-center">
-                    <div class="quantity-selector">
-                      <button class="quantity-btn decrease">
-                        <i class="bi bi-dash"></i>
-                      </button>
-                      <input type="number" class="quantity-input" value="1" min="1" max="10">
-                      <button class="quantity-btn increase">
-                        <i class="bi bi-plus"></i>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="col-lg-2 col-12 mt-3 mt-lg-0 text-center">
-                    <div class="item-total">
-                      <span>16.990.000đ</span>
-                    </div>
-                  </div>
+                <div class="d-grid gap-2 mb-4">
+                  <button type="submit" class="btn btn-primary">Đăng nhập</button>
+                  <button type="button" class="btn btn-outline">
+                    <i class="bi bi-google me-2"></i>Đăng nhập bằng Google
+                  </button>
                 </div>
-              </div><!-- End Cart Item -->
 
-              <div class="cart-actions">
-                <div class="row">
-                  <div class="col-lg-6 mb-3 mb-lg-0">
-                    <div class="coupon-form">
-                      <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Nhập mã giảm giá">
-                        <button class="btn btn-outline-accent" type="button">Áp dụng</button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6 text-md-end">
-                    <button class="btn btn-outline-heading me-2">
-                      <i class="bi bi-arrow-clockwise"></i> Cập nhật giỏ hàng
-                    </button>
-                    <button class="btn btn-outline-remove">
-                      <i class="bi bi-trash"></i> Xóa giỏ hàng
-                    </button>
-                  </div>
+                <div class="signup-link text-center">
+                  <span>Chưa có tài khoản?</span>
+                  <a href="#">Đăng ký miễn phí</a>
                 </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
-            <div class="cart-summary">
-              <h4 class="summary-title">Tổng đơn hàng</h4>
-
-              <div class="summary-item">
-                <span class="summary-label">Tạm tính</span>
-                <span class="summary-value">75.970.000đ</span>
-              </div>
-
-              <div class="summary-item shipping-item">
-                <span class="summary-label">Vận chuyển</span>
-                <div class="shipping-options">
-                  <div class="form-check text-end">
-                    <input class="form-check-input" type="radio" name="shipping" id="standard" checked="">
-                    <label class="form-check-label" for="standard">
-                      Giao hàng tiêu chuẩn - 30.000đ
-                    </label>
-                  </div>
-                  <div class="form-check text-end">
-                    <input class="form-check-input" type="radio" name="shipping" id="express">
-                    <label class="form-check-label" for="express">
-                      Giao hàng nhanh - 50.000đ
-                    </label>
-                  </div>
-                  <div class="form-check text-end">
-                    <input class="form-check-input" type="radio" name="shipping" id="free">
-                    <label class="form-check-label" for="free">
-                      Miễn phí vận chuyển (Đơn hàng trên 5.000.000đ)
-                    </label>
-                  </div>
-                </div>
-              </div>
-
-              <div class="summary-item">
-                <span class="summary-label">Thuế</span>
-                <span class="summary-value">0đ</span>
-              </div>
-
-              <div class="summary-item discount">
-                <span class="summary-label">Giảm giá</span>
-                <span class="summary-value">-0đ</span>
-              </div>
-
-              <div class="summary-total">
-                <span class="summary-label">Tổng cộng</span>
-                <span class="summary-value">75.970.000đ</span>
-              </div>
-
-              <div class="checkout-button">
-                <a href="checkout.html" class="btn btn-accent w-100">
-                  Tiến hành thanh toán <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
-
-              <div class="continue-shopping">
-                <a href="category.html" class="btn btn-link w-100">
-                  <i class="bi bi-arrow-left"></i> Tiếp tục mua sắm
-                </a>
-              </div>
-
-              <div class="payment-methods">
-                <p class="payment-title">Chấp nhận thanh toán</p>
-                <div class="payment-icons">
-                  <i class="bi bi-credit-card"></i>
-                  <i class="bi bi-paypal"></i>
-                  <i class="bi bi-wallet2"></i>
-                  <i class="bi bi-bank"></i>
-                </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>
-
       </div>
-
-    </section><!-- /Cart Section -->
+    </section><!-- /Login Section -->
 
   </main>
 
@@ -741,8 +531,6 @@
 
   <!-- Ajax Navigation -->
   <script src="assets/js/ajax-navigation.js"></script>
-
-  
 
 </body>
 

@@ -1,141 +1,301 @@
-// Ajax Navigation Handler
-document.addEventListener('DOMContentLoaded', function() {
-    // Xử lý tất cả các liên kết trong trang
-    document.addEventListener('click', function(e) {
-        // Kiểm tra nếu click vào thẻ a
-        if (e.target.tagName === 'A' || e.target.closest('a')) {
-            const link = e.target.tagName === 'A' ? e.target : e.target.closest('a');
-            
-            // Bỏ qua các liên kết đặc biệt
-            if (link.getAttribute('href') === '#' || 
-                link.getAttribute('target') === '_blank' ||
-                link.getAttribute('data-bs-toggle') ||
-                link.getAttribute('data-bs-target')) {
-                return;
+document.addEventListener('DOMContentLoaded', () => {
+    // Ajax Navigation
+    document.addEventListener('click', e => {
+        const link = e.target.closest('a');
+        if (!link) return;
+
+        const href = link.getAttribute('href');
+        const skipLink = !href || href === '#' || href.startsWith('javascript:') || 
+                         href.startsWith('mailto:') || href.startsWith('tel:') || 
+                         link.target === '_blank' || 
+                         link.dataset.bsToggle || link.dataset.bsTarget;
+        if (skipLink) return;
+
+        try {
+            const url = new URL(href, location.href);
+            if (url.origin === location.origin) {
+                e.preventDefault();
+                navigateAjax(url.href);
             }
-
-            e.preventDefault();
-            const url = link.getAttribute('href');
-            
-            // Hiển thị loading
-            showLoading();
-
-            // Gửi request Ajax
-            fetch(url)
-                .then(response => response.text())
-                .then(html => {
-                    // Cập nhật nội dung trang
-                    updatePageContent(html);
-                    // Cập nhật URL
-                    history.pushState({}, '', url);
-                    // Ẩn loading
-                    hideLoading();
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    hideLoading();
-                    // Nếu có lỗi, chuyển hướng bình thường
-                    window.location.href = url;
-                });
+        } catch (err) {
+            console.error('Invalid URL:', href);
         }
     });
 
-    // Xử lý nút back/forward của trình duyệt
-    window.addEventListener('popstate', function() {
-        const url = window.location.href;
-        showLoading();
-        fetch(url)
-            .then(response => response.text())
-            .then(html => {
-                updatePageContent(html);
-                hideLoading();
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                hideLoading();
-                window.location.href = url;
-            });
-    });
+    // Handle back/forward
+    window.addEventListener('popstate', () => navigateAjax(location.href, false));
 });
 
-// Hàm cập nhật nội dung trang
-function updatePageContent(html) {
-    // Tạo một DOM tạm thời để parse HTML
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(html, 'text/html');
+// Ajax navigation logic
+function navigateAjax(url, push = true) {
+    showLoading();
 
-    // Cập nhật title
-    document.title = doc.title;
-
-    // Cập nhật main content
-    const newMain = doc.querySelector('main');
-    const currentMain = document.querySelector('main');
-    if (newMain && currentMain) {
-        currentMain.innerHTML = newMain.innerHTML;
-    }
-
-    // Cập nhật header
-    const newHeader = doc.querySelector('header');
-    const currentHeader = document.querySelector('header');
-    if (newHeader && currentHeader) {
-        currentHeader.innerHTML = newHeader.innerHTML;
-    }
-
-    // Cập nhật footer
-    const newFooter = doc.querySelector('footer');
-    const currentFooter = document.querySelector('footer');
-    if (newFooter && currentFooter) {
-        currentFooter.innerHTML = newFooter.innerHTML;
-    }
-
-    // Khởi tạo lại các script và event listener
-    initializeScripts();
+    fetch(url)
+        .then(res => {
+            if (!res.ok) throw new Error(`HTTP error ${res.status}`);
+            return res.text();
+        })
+        .then(html => {
+            const doc = new DOMParser().parseFromString(html, 'text/html');
+            updatePageContent(doc);
+            executeInlineScripts(doc);
+            if (push) history.pushState({}, '', url);
+            hideLoading();
+            initializeAfterAjax();
+        })
+        .catch(err => {
+            console.error('Ajax Error:', err);
+            hideLoading();
+            if (err.message.includes('HTTP error')) location.href = url;
+        });
 }
 
-// Hàm hiển thị loading
+// Update main sections
+function updatePageContent(doc) {
+    document.title = doc.title;
+    ['main', 'header', 'footer'].forEach(tag => {
+        const newEl = doc.querySelector(tag);
+        const oldEl = document.querySelector(tag);
+        if (newEl && oldEl) oldEl.innerHTML = newEl.innerHTML;
+    });
+}
+
+// Execute scripts from new HTML
+function executeInlineScripts(doc) {
+    doc.querySelectorAll('script').forEach(script => {
+        const newScript = document.createElement('script');
+        script.src ? (newScript.src = script.src, newScript.async = false) 
+                   : newScript.textContent = script.textContent;
+        document.body.appendChild(newScript);
+        document.body.removeChild(newScript);
+    });
+}
+
+// Show/hide loading indicator
 function showLoading() {
     const preloader = document.getElementById('preloader');
-    if (preloader) {
-        preloader.style.display = 'block';
-    }
+    if (preloader) preloader.style.display = 'block';
 }
-
-// Hàm ẩn loading
 function hideLoading() {
     const preloader = document.getElementById('preloader');
-    if (preloader) {
-        preloader.style.display = 'none';
-    }
+    if (preloader) preloader.style.display = 'none';
 }
 
-// Hàm khởi tạo lại các script và event listener
+// Initialize after Ajax
+function initializeAfterAjax() {
+    initializeScripts();
+    window.scrollTo(0, 0);
+}
+
+// Initialize plugins and components
 function initializeScripts() {
-    // Khởi tạo lại AOS
-    if (typeof AOS !== 'undefined') {
-        AOS.init();
+    // AOS
+    if (window.AOS) {
+        if (window.aosInstance) window.aosInstance.destroy();
+        window.aosInstance = AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
     }
 
-    // Khởi tạo lại Swiper
-    if (typeof Swiper !== 'undefined') {
-        const swipers = document.querySelectorAll('.swiper');
-        swipers.forEach(swiper => {
-            const config = JSON.parse(swiper.querySelector('.swiper-config').textContent);
-            new Swiper(swiper, config);
+    // Swiper
+    if (window.Swiper) {
+        document.querySelectorAll('.swiper').forEach(swiper => {
+            if (swiper.swiper) swiper.swiper.destroy(true, true);
+            const configEl = swiper.querySelector('.swiper-config');
+            if (configEl) swiper.swiper = new Swiper(swiper, JSON.parse(configEl.textContent));
         });
     }
 
-    // Khởi tạo lại các dropdown của Bootstrap
-    const dropdowns = document.querySelectorAll('.dropdown-toggle');
-    dropdowns.forEach(dropdown => {
-        new bootstrap.Dropdown(dropdown);
+    // Isotope
+    if (window.Isotope) {
+        document.querySelectorAll('.isotope-container').forEach(container => {
+            if (container.isotope) container.isotope.destroy();
+            container.isotope = new Isotope(container, {
+                itemSelector: '.isotope-item',
+                layoutMode: 'masonry',
+                transitionDuration: '0.4s'
+            });
+        });
+
+        document.querySelectorAll('.isotope-filters').forEach(group => {
+            const cloned = group.cloneNode(true);
+            group.replaceWith(cloned);
+            cloned.addEventListener('click', e => {
+                const btn = e.target.closest('li');
+                if (!btn) return;
+                e.preventDefault();
+                const filter = btn.getAttribute('data-filter');
+                cloned.querySelectorAll('li').forEach(li => li.classList.remove('filter-active'));
+                btn.classList.add('filter-active');
+                document.querySelectorAll('.isotope-container').forEach(container => {
+                    if (container.isotope) container.isotope.arrange({ filter });
+                });
+            });
+        });
+    }
+
+    // Initialize Bootstrap components
+    initializeBootstrapComponents();
+    initScrollTop();
+}
+
+// Initialize Bootstrap components
+function initializeBootstrapComponents() {
+    // Helper function to initialize Bootstrap components
+    const bootstrapInit = (selector, constructor, opts = {}) => {
+        document.querySelectorAll(selector).forEach(el => {
+            const instance = bootstrap[constructor].getInstance(el);
+            if (instance) instance.dispose();
+            new bootstrap[constructor](el, opts);
+        });
+    };
+
+    // Initialize all Bootstrap components
+    bootstrapInit('.dropdown-toggle', 'Dropdown', { offset: [0, 8], boundary: 'viewport' });
+    bootstrapInit('[data-bs-toggle="collapse"]', 'Collapse');
+    bootstrapInit('[data-bs-toggle="tooltip"]', 'Tooltip');
+    bootstrapInit('[data-bs-toggle="popover"]', 'Popover');
+    bootstrapInit('.modal', 'Modal');
+
+    // Initialize header components
+    initializeHeaderComponents();
+}
+
+// Initialize header components
+function initializeHeaderComponents() {
+    // Initialize account and cart dropdowns
+    ['account', 'cart'].forEach(type => {
+        const toggle = document.querySelector(`.${type}-dropdown .dropdown-toggle`);
+        if (!toggle) return;
+
+        const dropdown = bootstrap.Dropdown.getInstance(toggle);
+        if (dropdown) dropdown.dispose();
+        new bootstrap.Dropdown(toggle, { offset: [0, 8], boundary: 'viewport' });
     });
 
-    // Khởi tạo lại các collapse của Bootstrap
-    const collapses = document.querySelectorAll('[data-bs-toggle="collapse"]');
-    collapses.forEach(collapse => {
-        new bootstrap.Collapse(collapse);
+    // Initialize mobile search
+    const searchToggle = document.querySelector('.mobile-search-toggle');
+    if (searchToggle) {
+        const collapse = bootstrap.Collapse.getInstance(searchToggle);
+        if (collapse) collapse.dispose();
+        new bootstrap.Collapse(searchToggle);
+    }
+
+    // Initialize mobile navigation
+    const navToggle = document.querySelector('.mobile-nav-toggle');
+    if (navToggle) {
+        // Remove old event listeners
+        const newNavToggle = navToggle.cloneNode(true);
+        navToggle.parentNode.replaceChild(newNavToggle, navToggle);
+        
+        newNavToggle.addEventListener('click', () => {
+            document.body.classList.toggle('mobile-nav-active');
+            newNavToggle.classList.toggle('bi-list');
+            newNavToggle.classList.toggle('bi-x');
+        });
+    }
+
+    // Initialize main navigation
+    initializeMainNavigation();
+
+    // Auto close mobile nav when clicking links
+    document.querySelectorAll('#navmenu a').forEach(link => {
+        // Remove old event listeners
+        const newLink = link.cloneNode(true);
+        link.parentNode.replaceChild(newLink, link);
+        
+        newLink.addEventListener('click', () => {
+            if (document.body.classList.contains('mobile-nav-active')) {
+                document.body.classList.remove('mobile-nav-active');
+                const navToggle = document.querySelector('.mobile-nav-toggle');
+                if (navToggle) {
+                    navToggle.classList.add('bi-list');
+                    navToggle.classList.remove('bi-x');
+                }
+            }
+        });
     });
 
-    // Scroll to top
-    window.scrollTo(0, 0);
-} 
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', e => {
+        if (!e.target.closest('.dropdown')) {
+            document.querySelectorAll('.dropdown-menu.show').forEach(menu => {
+                menu.classList.remove('show');
+            });
+        }
+    });
+
+    // Close dropdown when clicking items
+    document.querySelectorAll('.dropdown-item').forEach(item => {
+        // Remove old event listeners
+        const newItem = item.cloneNode(true);
+        item.parentNode.replaceChild(newItem, item);
+        
+        newItem.addEventListener('click', e => {
+            e.stopPropagation();
+            const menu = newItem.closest('.dropdown-menu');
+            if (menu) menu.classList.remove('show');
+        });
+    });
+}
+
+// Initialize main navigation
+function initializeMainNavigation() {
+    // Initialize all dropdown menus in the main navigation
+    document.querySelectorAll('.nav-item.dropdown').forEach(dropdown => {
+        const toggle = dropdown.querySelector('.dropdown-toggle');
+        if (!toggle) return;
+
+        // Remove old event listeners
+        const newToggle = toggle.cloneNode(true);
+        toggle.parentNode.replaceChild(newToggle, toggle);
+
+        // Initialize Bootstrap dropdown
+        const dropdownInstance = bootstrap.Dropdown.getInstance(newToggle);
+        if (dropdownInstance) dropdownInstance.dispose();
+        new bootstrap.Dropdown(newToggle, {
+            offset: [0, 8],
+            boundary: 'viewport'
+        });
+
+        // Add click event to prevent default behavior
+        newToggle.addEventListener('click', e => {
+            e.preventDefault();
+            e.stopPropagation();
+        });
+
+        // Add click event to dropdown menu
+        const menu = dropdown.querySelector('.dropdown-menu');
+        if (menu) {
+            const newMenu = menu.cloneNode(true);
+            menu.parentNode.replaceChild(newMenu, menu);
+            newMenu.addEventListener('click', e => e.stopPropagation());
+        }
+    });
+
+    // Initialize all nav links
+    document.querySelectorAll('.nav-link').forEach(link => {
+        // Remove old event listeners
+        const newLink = link.cloneNode(true);
+        link.parentNode.replaceChild(newLink, link);
+
+        // Add click event to prevent default behavior for dropdown toggles
+        if (newLink.classList.contains('dropdown-toggle')) {
+            newLink.addEventListener('click', e => {
+                e.preventDefault();
+                e.stopPropagation();
+            });
+        }
+    });
+}
+
+// Scroll to top
+function initScrollTop() {
+    const btn = document.getElementById('scroll-top');
+    if (btn) {
+        const newBtn = btn.cloneNode(true);
+        btn.replaceWith(newBtn);
+        newBtn.addEventListener('click', e => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+}

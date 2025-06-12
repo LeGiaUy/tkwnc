@@ -4743,10 +4743,6 @@ section,
 }
 
 @media (max-width: 767.98px) {
-  .category-header .filter-container {
-    padding: 1rem;
-  }
-
   .category-header .filter-container .active-filters {
     flex-direction: column;
     align-items: flex-start;
@@ -10321,10 +10317,6 @@ section,
 }
 
 @media (max-width: 768px) {
-  .blog-comment-form {
-    padding: 20px;
-  }
-
   .blog-comment-form .section-header h3 {
     font-size: 24px;
   }
